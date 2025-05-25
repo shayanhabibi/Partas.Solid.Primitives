@@ -5,7 +5,7 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "clipboard"
+    let [<Literal>] path = "@solid-primitives/clipboard"
     let [<Literal>] version = ""
 
 open Spec

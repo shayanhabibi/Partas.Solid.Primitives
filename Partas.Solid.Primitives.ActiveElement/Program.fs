@@ -6,7 +6,7 @@ open Partas.Solid.Primitives
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "active-element"
+    let [<Literal>] path = "@solid-primitives/active-element"
     let [<Literal>] version = ""
 
 open Spec

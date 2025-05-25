@@ -7,7 +7,7 @@ open System.Runtime.CompilerServices
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "trigger"
+    let [<Literal>] path = "@solid-primitives/trigger"
     let [<Literal>] version = ""
     
 open Spec

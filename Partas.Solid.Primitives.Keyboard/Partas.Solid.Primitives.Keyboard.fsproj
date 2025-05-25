@@ -16,10 +16,10 @@
         <PackageTags>Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives</PackageTags>
         <Authors>Shayan Habibi</Authors>
         <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <!--        <PackageReadmeFile>README.md</PackageReadmeFile>-->
-        <PackageVersion>0.1.0</PackageVersion>
-        <PackageReleaseNotes>Init</PackageReleaseNotes>
+        <PackageVersion>0.1.1</PackageVersion>
+        <PackageReleaseNotes>Fix string literal path</PackageReleaseNotes>
         <NpmDependencies>
             <NpmPackage Name="@solid-primitives/keyboard" Version=">= 0.1.0" />
         </NpmDependencies>

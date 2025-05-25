@@ -6,7 +6,7 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "media"
+    let [<Literal>] path = "@solid-primitives/media"
     let [<Literal>] version = ""
 
 open Spec

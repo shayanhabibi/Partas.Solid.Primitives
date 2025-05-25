@@ -6,7 +6,7 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "scheduled"
+    let [<Literal>] path = "@solid-primitives/scheduled"
     let [<Literal>] version = "1.5.0"
 
 open Spec

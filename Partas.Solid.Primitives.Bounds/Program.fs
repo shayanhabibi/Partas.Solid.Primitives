@@ -6,7 +6,7 @@ open Browser.Types
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "bounds"
+    let [<Literal>] path = "@solid-primitives/bounds"
     let [<Literal>] version = "0.1.0"
 
 open Spec

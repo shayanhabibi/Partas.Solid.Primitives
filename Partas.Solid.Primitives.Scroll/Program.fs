@@ -6,7 +6,7 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "scroll"
+    let [<Literal>] path = "@solid-primitives/scroll"
     let [<Literal>] version = "2.1.0"
 
 open Spec

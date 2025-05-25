@@ -7,7 +7,7 @@ open Fable.Core.JS
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "tween"
+    let [<Literal>] path = "@solid-primitives/tween"
     let [<Literal>] version = "1.4.0"
 
 open Spec

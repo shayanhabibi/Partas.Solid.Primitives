@@ -6,7 +6,7 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "event-bus"
+    let [<Literal>] path = "@solid-primitives/event-bus"
     let [<Literal>] version = ""
 
 open Spec

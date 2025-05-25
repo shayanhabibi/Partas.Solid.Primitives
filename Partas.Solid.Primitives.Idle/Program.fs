@@ -7,7 +7,7 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "idle"
+    let [<Literal>] path = "@solid-primitives/idle"
     let [<Literal>] version = "0.2.0"
 
 open Spec

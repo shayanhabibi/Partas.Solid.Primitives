@@ -7,7 +7,7 @@ open Browser.Types
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "timer"
+    let [<Literal>] path = "@solid-primitives/timer"
     let [<Literal>] version = "1.4.0"
 
 open Spec

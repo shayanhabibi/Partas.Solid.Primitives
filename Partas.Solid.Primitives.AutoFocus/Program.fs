@@ -7,7 +7,7 @@ open Partas.Solid.Primitives
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "autofocus"
+    let [<Literal>] path = "@solid-primitives/autofocus"
     let [<Literal>] version = ""
 
 open Spec

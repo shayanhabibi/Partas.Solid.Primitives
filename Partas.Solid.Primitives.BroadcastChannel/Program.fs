@@ -7,7 +7,7 @@ open Browser.Types
 
 [<Fable.Core.Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "broadcast-channel"
+    let [<Literal>] path = "@solid-primitives/broadcast-channel"
     let [<Literal>] version = "0.1.0"
 
 [<AllowNullLiteral; Interface>]

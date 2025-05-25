@@ -7,7 +7,7 @@ open Browser.Types
 
 [<Erase>]
 module Spec =
-    let [<Literal>] path = Common.path + "keyboard"
+    let [<Literal>] path = "@solid-primitives/keyboard"
     let [<Literal>] version = ""
     
 open Spec
