@@ -3,3 +3,17 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+.gitignore
+*.d.ts
+*.d.ts.map
+*.ts
+*.js
+*.cjs
+*.xml
+*.cjs.map
+*.flow
+*.mjs
+LICENSE
+*.json
+!dotnet-tools.json
+*.mjs.map

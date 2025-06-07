@@ -36,6 +36,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Partas.Solid.Primitives.Bou
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Partas.Solid.Primitives.Tween", "Partas.Solid.Primitives.Tween\Partas.Solid.Primitives.Tween.fsproj", "{F5F4BE14-2E8B-4606-BCF6-918BBF9A7EDF}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Partas.Solid.Primitives.Mouse", "Partas.Solid.Primitives.Mouse\Partas.Solid.Primitives.Mouse.fsproj", "{B155E5B9-1F02-401F-B6FA-4B24C1601254}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,5 +112,9 @@ Global
 		{F5F4BE14-2E8B-4606-BCF6-918BBF9A7EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5F4BE14-2E8B-4606-BCF6-918BBF9A7EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5F4BE14-2E8B-4606-BCF6-918BBF9A7EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B155E5B9-1F02-401F-B6FA-4B24C1601254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B155E5B9-1F02-401F-B6FA-4B24C1601254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B155E5B9-1F02-401F-B6FA-4B24C1601254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B155E5B9-1F02-401F-B6FA-4B24C1601254}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
