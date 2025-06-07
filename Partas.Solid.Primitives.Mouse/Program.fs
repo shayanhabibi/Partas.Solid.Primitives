@@ -5,6 +5,7 @@ open Fable.Core
 open Fable.Core.JsInterop
 open Partas.Solid.Primitives
 open Partas.Solid
+open Partas.Solid.Experimental.U
 
 [<Erase>]
 module Spec =
@@ -92,7 +93,7 @@ type Mouse =
     /// <seealso cref="UseTouchOptions">UseTouchOptions</seealso>
     /// <seealso cref="FollowTouchOptions">FollowTouchOptions</seealso>
     [<Import("makeMousePositionListener", path); ParamObject(2)>]
-    static member makeMousePositionListener (target: Node, callback: (MousePosition -> unit), ?touch: bool, ?followTouch: bool) : DisposeCallback = nativeOnly
+    static member makeMousePositionListener (target: U4<#HtmlElement, #Element, Document, Window>, callback: (MousePosition -> unit), ?touch: bool, ?followTouch: bool) : DisposeCallback = nativeOnly
     /// <summary>
     /// Attaches event listeners to provided targat, listening for mouse/touch entering/leaving the element.
     /// </summary>
@@ -111,17 +112,17 @@ type Mouse =
     /// function removing all event listeners
     /// </returns>
     [<Import("makeMouseInsideListener", path); ParamObject(2)>]
-    static member makeMouseInsideListener (target: Node, callback: (bool -> unit), ?touch: bool) : DisposeCallback = nativeOnly
+    static member makeMouseInsideListener (target: U4<#HtmlElement, #Element, Document, Window>, callback: (bool -> unit), ?touch: bool) : DisposeCallback = nativeOnly
     /// <summary>
     /// Turn position relative to the page, into position relative to an element.
     /// </summary>
     [<Import("getPositionToElement", path)>]
-    static member getPositionToElement(pageX: int, pageY: int, el: HtmlElement): PositionRelativeToElement = nativeOnly
+    static member getPositionToElement(pageX: int, pageY: int, el: U4<#HtmlElement, #Element, Document, Window>): PositionRelativeToElement = nativeOnly
     /// <summary>
     /// Turn position relative to the page, into position relative to an element. Clamped to the element bounds.
     /// </summary>
     [<Import("getPositionInElement", path)>]
-    static member getPositionInElement(pageX: int, pageY: int, el: HtmlElement): PositionRelativeToElement = nativeOnly
+    static member getPositionInElement(pageX: int, pageY: int, el: U4<#HtmlElement, #Element, Document, Window>): PositionRelativeToElement = nativeOnly
     /// <summary>
     /// Turn position relative to the page, into position relative to the screen.
     /// </summary>
@@ -156,7 +157,7 @@ type Mouse =
     /// </code>
     /// </returns>
     [<Import("createMousePosition", path)>]
-    static member createMousePosition (?target: Node, ?initialValues: MousePositionInside, ?touch: bool, ?followTouch: bool) : MousePositionInside = nativeOnly
+    static member createMousePosition (?target: U4<#HtmlElement, #Element, Document, Window>, ?initialValues: MousePositionInside, ?touch: bool, ?followTouch: bool) : MousePositionInside = nativeOnly
     /// <summary>
     /// Attaches event listeners to <see href="target">target</see> element to provide a reactive object of current mouse position on the page.
     /// </summary>
@@ -186,7 +187,7 @@ type Mouse =
     /// </code>
     /// </returns>
     [<Import("createMousePosition", path); ParamObject(1)>]
-    static member createMousePosition (?target: Node Accessor, ?initialValues: MousePositionInside, ?touch: bool, ?followTouch: bool) : MousePositionInside = nativeOnly
+    static member createMousePosition (?target: U4<Accessor<#HtmlElement>, Accessor<#Element>, Accessor<Document>, Accessor<Window>>, ?initialValues: MousePositionInside, ?touch: bool, ?followTouch: bool) : MousePositionInside = nativeOnly
     /// <summary>
     /// Attaches event listeners to <c>window</c> to provide a reactive object of current mouse position on the page.
     ///
@@ -236,5 +237,5 @@ type Mouse =
     /// Autoupdating position relative to top-left of the target + current bounds of the element.
     /// </returns>
     [<Import("createPositionToElement", path); ParamObject(2)>]
-    static member createPositionToElement (element: U2<Element, Accessor<Element>>, pos: Accessor<Position>, ?initialValues: PositionRelativeToElement, ?touch: bool, ?followTouch: bool) : PositionRelativeToElement = nativeOnly
+    static member createPositionToElement (element: U4<#HtmlElement, #Element, Accessor<#HtmlElement>, Accessor<#Element>>, pos: Accessor<Position>, ?initialValues: PositionRelativeToElement, ?touch: bool, ?followTouch: bool) : PositionRelativeToElement = nativeOnly
 
