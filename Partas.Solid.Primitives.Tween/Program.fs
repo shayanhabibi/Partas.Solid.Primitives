@@ -12,17 +12,13 @@ module Spec =
 
 open Spec
 
-type Easing = (float -> float)
 /// <summary>
 /// Suggested to use easing functions that are already prepared:
 /// <code lang="fsharp">
 /// let tweenedValue = createTween(value, CreateTweenOptions(500, Easing.easeInSine))
 /// </code>
 /// </summary>
-[<Pojo>]
-type CreateTweenOptions(?duration: int, ?easing: Easing) =
-    member val duration = duration |> Option.defaultValue 0
-    member val easing = easing |> Option.defaultValue id
+type Easing = (float -> float)
 /// Contains typical easing functions
 [<Erase; AutoOpen>]
 module Easing =
@@ -47,7 +43,6 @@ module Easing =
         if x = 0. then 0.
         elif x = 1. then 1.
         else if x < 0.5 then 2. ** (20. * x - 10.) / 2. else (2. - 2. ** (-20. * x + 10.)) / 2.
-
     let easeInCirc: Easing = fun x -> 1. - Math.sqrt(1. - x * x)
     let easeOutCirc: Easing = fun x -> Math.sqrt(1. - (x - 1.) * (x - 1.))
     let easeInOutCirc: Easing = fun x -> 
@@ -87,6 +82,7 @@ module Easing =
         if x < 0.5 then (1. - easeOutBounce(1. - 2. * x)) / 2.
         else (1. + easeOutBounce(2. * x - 1.)) / 2.
     let easeLinear:  Easing = id
+
 [<Erase; AutoOpen>]
 type Tween =
     /// <summary>
@@ -99,8 +95,8 @@ type Tween =
     /// <br/>- easing is a function that maps a number between 0 and 1 to a number between 0 and 1, to speed up or slow down different parts of the transition. The default easing function (t) => t is linear (no easing). A common choice is (t) => 0.5 - Math.cos(Math.PI * t) / 2.
     /// <br/><br/>Internally, createTween uses requestAnimationFrame to smoothly update the tweened value at the display refresh rate. After the tweened value reaches the underlying signal value, it will stop updating via requestAnimationFrame for efficiency.
     /// </summary>
-    [<ImportMember(path)>]
-    static member createTween(target: Accessor<float>, ?options: CreateTweenOptions): Accessor<float> = jsNative
+    [<ImportMember(path); ParamObject(1)>]
+    static member createTween(target: Accessor<'T>, ?duration: int, ?easing: Easing): Accessor<'T> = jsNative
     /// <summary>
     /// Creates an efficient tweening derived signal that smoothly transitions a given signal from its previous value to its next value whenever it changes.
     /// <br/>
@@ -112,8 +108,5 @@ type Tween =
     /// <br/><br/>Internally, createTween uses requestAnimationFrame to smoothly update the tweened value at the display refresh rate. After the tweened value reaches the underlying signal value, it will stop updating via requestAnimationFrame for efficiency.
     /// </summary>
     [<ImportMember(path)>]
-    static member createTween(target: Accessor<int>, ?options: CreateTweenOptions): Accessor<int> = jsNative
-    static member inline createTween(target: Accessor<int>, duration: int, easing: Easing): Accessor<int> =
-        Tween.createTween(target, options = CreateTweenOptions(duration = duration, easing = easing))
-    static member inline createTween(target: Accessor<float>, duration: int, easing: Easing): Accessor<float> =
-        Tween.createTween(target, options = CreateTweenOptions(duration = duration, easing = easing))
+    static member createTween(target: Accessor<'T>): Accessor<'T> = jsNative
+    

@@ -3,11 +3,11 @@
     <PropertyGroup>
         <FablePackageType>library</FablePackageType>
         <TargetFramework>net9.0</TargetFramework>
-        <!--        <WarningsAsErrors>3239;0025</WarningsAsErrors>-->
-        <PackageId>Partas.Solid.Primitives.Tween</PackageId>
-        <Title>Partas.Solid.Primitives.Tween</Title>
-        <RootNamespace>Partas.Solid.Primitives.Tween</RootNamespace>
-        <AssemblyName>Partas.Solid.Primitives.Tween</AssemblyName>
+        <WarningsAsErrors>3239;0025</WarningsAsErrors>
+        <PackageId>Partas.Solid.Primitives.Spring</PackageId>
+        <Title>Partas.Solid.Primitives.Spring</Title>
+        <RootNamespace>Partas.Solid.Primitives.Spring</RootNamespace>
+        <AssemblyName>Partas.Solid.Primitives.Spring</AssemblyName>
         <Company>F# Community</Company>
         <Description>Bindings for Solid-js primitives</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,12 +16,12 @@
         <PackageTags>Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives</PackageTags>
         <Authors>Shayan Habibi</Authors>
         <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
-        <Version>0.1.2</Version>
+        <Version>0.1.0</Version>
         <!--        <PackageReadmeFile>README.md</PackageReadmeFile>-->
-        <PackageVersion>0.1.2</PackageVersion>
-        <PackageReleaseNotes>Fix method ambiguity</PackageReleaseNotes>
+        <PackageVersion>0.1.0</PackageVersion>
+        <PackageReleaseNotes>Init</PackageReleaseNotes>
         <NpmDependencies>
-            <NpmPackage Name="@solid-primitives/tween" Version=">= 1.4.0" />
+            <NpmPackage Name="@solid-primitives/spring" Version=">= 0.1.1" />
         </NpmDependencies>
     </PropertyGroup>
 
@@ -33,10 +33,10 @@
     <ItemGroup>
         <PackageReference Include="Fable.Core" Version="4.5.0" />
         <PackageReference Include="Fable.Package.SDK" Version="1.3.1">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <IncludeAssets>runtime; build; native; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Partas.Solid" Version="1.0.0-alpha4" />
+        <PackageReference Include="Partas.Solid" Version="1.0.0" />
     </ItemGroup>
 
     <ItemGroup>
