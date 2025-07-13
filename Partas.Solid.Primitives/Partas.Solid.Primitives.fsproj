@@ -3,7 +3,6 @@
     <PropertyGroup>
         <FablePackageType>library</FablePackageType>
         <TargetFramework>net9.0</TargetFramework>
-        <!--        <WarningsAsErrors>3239;0025</WarningsAsErrors>-->
         <PackageId>Partas.Solid.Primitives</PackageId>
         <Title>Partas.Solid.Primitives</Title>
         <RootNamespace>Partas.Solid.Primitives</RootNamespace>
@@ -16,24 +15,47 @@
         <PackageTags>Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives</PackageTags>
         <Authors>Shayan Habibi</Authors>
         <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
-        <Version>0.2.0</Version>
-        <!--        <PackageReadmeFile>README.md</PackageReadmeFile>-->
-        <PackageVersion>0.2.0</PackageVersion>
-        <PackageReleaseNotes>Init</PackageReleaseNotes>
+        <Version>0.3.0</Version>
+        <PackageVersion>0.3.0</PackageVersion>
+        <PackageReleaseNotes>Refactor Primitives namespaces</PackageReleaseNotes>
     </PropertyGroup>
-
-    <ItemGroup>
-        <!--        <None Include="../README.md" Pack="true" PackagePath="\" />-->
-        <Compile Include="Program.fs" />
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Fable.Core" Version="4.5.0" />
         <PackageReference Include="Fable.Package.SDK" Version="1.3.1">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <IncludeAssets>runtime; build; native; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Partas.Solid" Version="1.0.0-alpha4" />
+        <PackageReference Include="Partas.Solid" Version="1.*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Partas.Solid.Primitives.ActiveElement\Partas.Solid.Primitives.ActiveElement.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Audio\Partas.Solid.Primitives.Audio.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.AutoFocus\Partas.Solid.Primitives.AutoFocus.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Bounds\Partas.Solid.Primitives.Bounds.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.BroadcastChannel\Partas.Solid.Primitives.BroadcastChannel.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Clipboard\Partas.Solid.Primitives.Clipboard.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Common\Partas.Solid.Primitives.Common.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Devices\Partas.Solid.Primitives.Devices.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.EventBus\Partas.Solid.Primitives.EventBus.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.EventListener\Partas.Solid.Primitives.EventListener.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Idle\Partas.Solid.Primitives.Idle.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Keyboard\Partas.Solid.Primitives.Keyboard.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Media\Partas.Solid.Primitives.Media.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Mouse\Partas.Solid.Primitives.Mouse.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.PageVisibility\Partas.Solid.Primitives.PageVisibility.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Raf\Partas.Solid.Primitives.Raf.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Scheduled\Partas.Solid.Primitives.Scheduled.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Scroll\Partas.Solid.Primitives.Scroll.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Spring\Partas.Solid.Primitives.Spring.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Timer\Partas.Solid.Primitives.Timer.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Trigger\Partas.Solid.Primitives.Trigger.fsproj" />
+      <ProjectReference Include="..\Partas.Solid.Primitives.Tween\Partas.Solid.Primitives.Tween.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="Program.fs" />
     </ItemGroup>
 </Project>
 

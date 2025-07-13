@@ -17,3 +17,5 @@ LICENSE
 *.json
 !dotnet-tools.json
 *.mjs.map
+
+.fake

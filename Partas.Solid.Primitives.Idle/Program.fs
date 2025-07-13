@@ -1,14 +1,15 @@
-﻿namespace Partas.Solid.Primitives.Idle
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
 open Partas.Solid
 open Browser.Types
 open Fable.Core
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/idle"
-    let [<Literal>] version = "0.2.0"
+[<Erase; AutoOpen>]
+module private IdleSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/idle"
+        let [<Literal>] version = "0.2.0"
 
 open Spec
 

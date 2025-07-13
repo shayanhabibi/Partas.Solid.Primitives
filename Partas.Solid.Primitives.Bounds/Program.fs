@@ -1,15 +1,14 @@
-﻿namespace Partas.Solid.Primitives.Bounds
-open Partas.Solid.Primitives
+﻿namespace Partas.Solid.Primitives
 open Fable.Core
 open Partas.Solid
 open Browser.Types
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/bounds"
-    let [<Literal>] version = "0.1.0"
-
-open Spec
+[<Erase; AutoOpen>]
+module BoundsSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/bounds"
+        let [<Literal>] version = "0.1.0"
 
 [<Interface; AllowNullLiteral>]
 type ElementBounds =
@@ -29,7 +28,7 @@ type Bounds =
     /// <param name="trackMutation">Listen to changes to the dom structure/styles</param>
     /// <param name="trackResize">Listen to changes to the element's resize events</param>
     /// <remarks>All options are 'truthy' by default</remarks>
-    [<ImportMember(path); ParamObject(1)>]
+    [<ImportMember(Spec.path); ParamObject(1)>]
     static member createElementBounds(target: #HTMLElement,
                                       ?trackScroll: bool,
                                       ?trackMutation: bool,
@@ -38,7 +37,7 @@ type Bounds =
     /// Creates a reactive store-like object of current element bounds — position on the screen, and size dimensions. Bounds will be automatically updated on scroll, resize events and updates to the DOM.
     /// </summary>
     /// <param name="target">Ref or reactive ref element</param>
-    [<ImportMember(path)>]
+    [<ImportMember(Spec.path)>]
     static member createElementBounds(target: #HTMLElement): ElementBounds = jsNative
     /// <summary>
     /// Creates a reactive store-like object of current element bounds — position on the screen, and size dimensions. Bounds will be automatically updated on scroll, resize events and updates to the DOM.
@@ -48,7 +47,7 @@ type Bounds =
     /// <param name="trackMutation">Listen to changes to the dom structure/styles</param>
     /// <param name="trackResize">Listen to changes to the element's resize events</param>
     /// <remarks>All options are 'truthy' by default</remarks>
-    [<ImportMember(path); ParamObject(1)>]
+    [<ImportMember(Spec.path); ParamObject(1)>]
     static member createElementBounds(target: Accessor<#HTMLElement>,
                                       ?trackScroll: bool,
                                       ?trackMutation: bool,
@@ -57,6 +56,6 @@ type Bounds =
     /// Creates a reactive store-like object of current element bounds — position on the screen, and size dimensions. Bounds will be automatically updated on scroll, resize events and updates to the DOM.
     /// </summary>
     /// <param name="target">Ref or reactive ref element</param>
-    [<ImportMember(path)>]
+    [<ImportMember(Spec.path)>]
     static member createElementBounds(target: Accessor<#HTMLElement>): ElementBounds = jsNative
     

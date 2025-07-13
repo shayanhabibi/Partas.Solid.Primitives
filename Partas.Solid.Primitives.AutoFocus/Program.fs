@@ -1,16 +1,13 @@
-﻿namespace Partas.Solid.Primitives.AutoFocus
+﻿namespace Partas.Solid.Primitives
 
 open Partas.Solid
 open Fable.Core
-open Browser.Types
-open Partas.Solid.Primitives
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/autofocus"
-    let [<Literal>] version = ""
-
-open Spec
+[<Erase; AutoOpen>]
+module private AutoFocusSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/autofocus"
 
 [<Erase; AutoOpen>]
 type AutoFocus =
@@ -27,7 +24,7 @@ type AutoFocus =
     /// button(autofocus = true).ref(autofocus)
     /// </code>
     /// </example>
-    [<ImportMember(path)>]
+    [<ImportMember(Spec.path)>]
     static member autofocus = jsNative
     
     /// <summary>
@@ -47,5 +44,5 @@ type AutoFocus =
     /// 
     /// /button ref={setRef}>Autofocused /button>;
     /// </code></example>
-    [<ImportMember(path)>]
+    [<ImportMember(Spec.path)>]
     static member createAutofocus (ref: unit -> #HtmlElement): unit = jsNative

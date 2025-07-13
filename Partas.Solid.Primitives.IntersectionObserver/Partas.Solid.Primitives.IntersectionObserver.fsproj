@@ -4,8 +4,8 @@
         <FablePackageType>library</FablePackageType>
         <TargetFramework>net9.0</TargetFramework>
         <!--        <WarningsAsErrors>3239;0025</WarningsAsErrors>-->
-        <PackageId>Partas.Solid.Primitives.Keyboard</PackageId>
-        <Title>Partas.Solid.Primitives.Keyboard</Title>
+        <PackageId>Partas.Solid.Primitives.IntersectionObserver</PackageId>
+        <Title>Partas.Solid.Primitives.IntersectionObserver</Title>
         <Company>F# Community</Company>
         <Description>Bindings for Solid-js primitives</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -14,11 +14,11 @@
         <PackageTags>Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives</PackageTags>
         <Authors>Shayan Habibi</Authors>
         <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
-        <Version>0.2.0</Version>
-        <PackageVersion>0.2.0</PackageVersion>
-        <PackageReleaseNotes>Refactor Primitives namespaces</PackageReleaseNotes>
+        <Version>0.1.0</Version>
+        <PackageVersion>0.1.0</PackageVersion>
+        <PackageReleaseNotes>Init</PackageReleaseNotes>
         <NpmDependencies>
-            <NpmPackage Name="@solid-primitives/keyboard" Version=">= 0.1.0" />
+            <NpmPackage Name="@solid-primitives/intersection-observer" Version=">= 2.2.1" />
         </NpmDependencies>
     </PropertyGroup>
 

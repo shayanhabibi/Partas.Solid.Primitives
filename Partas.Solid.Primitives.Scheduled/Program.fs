@@ -1,13 +1,13 @@
-﻿namespace Partas.Solid.Primitives.Scheduled
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
-open Partas.Solid
 open Fable.Core
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/scheduled"
-    let [<Literal>] version = "1.5.0"
+[<Erase; AutoOpen>]
+module private ScheduledSpec = 
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/scheduled"
+        let [<Literal>] version = "1.5.0"
 
 open Spec
 

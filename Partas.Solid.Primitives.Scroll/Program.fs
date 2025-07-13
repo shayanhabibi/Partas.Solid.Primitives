@@ -1,13 +1,14 @@
-﻿namespace Partas.Solid.Primitives.Scroll
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
 open Partas.Solid
 open Fable.Core
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/scroll"
-    let [<Literal>] version = "2.1.0"
+[<Erase; AutoOpen>]
+module private ScrollSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/scroll"
+        let [<Literal>] version = "2.1.0"
 
 open Spec
 

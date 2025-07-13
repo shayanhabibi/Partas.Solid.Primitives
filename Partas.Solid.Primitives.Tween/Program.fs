@@ -1,14 +1,15 @@
-﻿namespace Partas.Solid.Primitives.Tween
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
 open Partas.Solid
 open Fable.Core
 open Fable.Core.JS
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/tween"
-    let [<Literal>] version = "1.4.0"
+[<Erase; AutoOpen>]
+module private TweenSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/tween"
+        let [<Literal>] version = "1.4.0"
 
 open Spec
 

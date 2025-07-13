@@ -1,16 +1,16 @@
-﻿namespace Partas.Solid.Primitives.Mouse
+﻿namespace Partas.Solid.Primitives
 
 open Browser.Types
 open Fable.Core
-open Fable.Core.JsInterop
-open Partas.Solid.Primitives
 open Partas.Solid
 open Partas.Solid.Experimental.U
 
-[<Erase>]
-module Spec =
-    let [<Erase; Literal>] path = "@solid-primitives/mouse"
-    let [<Erase; Literal>] version = "2.1.2"
+[<Erase; AutoOpen>]
+module private MouseSpec =
+    [<Erase>]
+    module Spec =
+        let [<Erase; Literal>] path = "@solid-primitives/mouse"
+        let [<Erase; Literal>] version = "2.1.2"
 
 open Spec
 

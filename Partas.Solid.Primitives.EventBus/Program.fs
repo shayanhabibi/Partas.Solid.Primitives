@@ -1,16 +1,12 @@
-﻿namespace Partas.Solid.Primitives.EventBus
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
-open Partas.Solid
 open Fable.Core
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/event-bus"
-    let [<Literal>] version = ""
-
-open Spec
-
+[<Erase; AutoOpen>]
+module private EventBusSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/event-bus"
 
 /// <summary>
 /// Provides all the base functions of an event-emitter, plus additional functions for managing listeners, it's behavior could be customized with an config object. Good for advanced usage.
@@ -198,15 +194,15 @@ type EventHub<'T> =
 //
 // type EventStackSimple<'Event> = EventStack<'Event, 'Event>
 
-[<Erase>]
-[<RequireQualifiedAccess>]
-module EventBus =
-    [<ImportMember(path)>]
-    let createEventBus<'T> (): EventBus<'T> = jsNative
+[<Erase; AutoOpen>]
+type EventBus =
+    [<ImportMember(Spec.path)>]
+    static member createEventBus<'T> (): EventBus<'T> = jsNative
     
-    [<ImportMember(path)>]
-    let createEmitter<'T> (): Emitter<'T> = jsNative
-    let inline createMappedEmitter<'MessageSchema> (): MappedEmitter<'MessageSchema> = createEmitter<'MessageSchema>() |> unbox 
+    [<ImportMember(Spec.path)>]
+    static member createEmitter<'T> (): Emitter<'T> = jsNative
+    [<Import("createEmitter",Spec.path)>]
+    static member createMappedEmitter<'MessageSchema> (): MappedEmitter<'MessageSchema> = jsNative 
     //todo createEventStack & utils
-    [<ImportMember(path)>]
-    let createEventHub<'T> ([<OptionalArgument>] channels: 'T): EventHub<'T> = jsNative
+    [<ImportMember(Spec.path)>]
+    static member createEventHub<'T> ([<OptionalArgument>] channels: 'T): EventHub<'T> = jsNative

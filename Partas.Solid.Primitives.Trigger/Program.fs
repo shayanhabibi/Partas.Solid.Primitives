@@ -1,14 +1,14 @@
-﻿namespace Partas.Solid.Primitives.Trigger
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
 open Fable.Core
 open Fable.Core.JS
 open System.Runtime.CompilerServices
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/trigger"
-    let [<Literal>] version = ""
+[<Erase; AutoOpen>]
+module private TriggerSpec = 
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/trigger"
     
 open Spec
 
