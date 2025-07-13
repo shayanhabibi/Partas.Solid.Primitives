@@ -44,7 +44,6 @@
       <ProjectReference Include="..\Partas.Solid.Primitives.Keyboard\Partas.Solid.Primitives.Keyboard.fsproj" />
       <ProjectReference Include="..\Partas.Solid.Primitives.Media\Partas.Solid.Primitives.Media.fsproj" />
       <ProjectReference Include="..\Partas.Solid.Primitives.Mouse\Partas.Solid.Primitives.Mouse.fsproj" />
-      <ProjectReference Include="..\Partas.Solid.Primitives.PageVisibility\Partas.Solid.Primitives.PageVisibility.fsproj" />
       <ProjectReference Include="..\Partas.Solid.Primitives.Raf\Partas.Solid.Primitives.Raf.fsproj" />
       <ProjectReference Include="..\Partas.Solid.Primitives.Scheduled\Partas.Solid.Primitives.Scheduled.fsproj" />
       <ProjectReference Include="..\Partas.Solid.Primitives.Scroll\Partas.Solid.Primitives.Scroll.fsproj" />
