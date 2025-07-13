@@ -1,13 +1,14 @@
-﻿namespace Partas.Solid.Primitives.Media
+﻿namespace Partas.Solid.Primitives
 
 open Partas.Solid
-open Partas.Solid.Primitives
 open Fable.Core
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/media"
-    let [<Literal>] version = ""
+[<Erase; AutoOpen>]
+module private MediaSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/media"
+        let [<Literal>] version = ""
 
 open Spec
 

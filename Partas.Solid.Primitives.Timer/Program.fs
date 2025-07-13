@@ -1,14 +1,14 @@
-﻿namespace Partas.Solid.Primitives.Timer
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
 open Partas.Solid
 open Fable.Core
-open Browser.Types
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/timer"
-    let [<Literal>] version = "1.4.0"
+[<Erase; AutoOpen>]
+module private TimerSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/timer"
+        let [<Literal>] version = "1.4.0"
 
 open Spec
 

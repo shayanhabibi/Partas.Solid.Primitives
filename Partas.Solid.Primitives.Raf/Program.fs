@@ -1,13 +1,15 @@
-﻿namespace Partas.Solid.Primitives.Raf
+﻿namespace Partas.Solid.Primitives
 
 open Fable.Core
 open Partas.Solid
 open Partas.Solid.Experimental.U
 
-[<Erase>]
-module Spec =
-    let [<Erase; Literal>] path = "@solid-primitives/raf"
-    let [<Erase; Literal>] version = "2.3.1"
+[<Erase; AutoOpen>]
+module private RafSpec = 
+    [<Erase>]
+    module Spec =
+        let [<Erase; Literal>] path = "@solid-primitives/raf"
+        let [<Erase; Literal>] version = "2.3.1"
 
 open Spec
 

@@ -3,11 +3,8 @@
 <PropertyGroup>
     <FablePackageType>library</FablePackageType>
     <TargetFramework>net9.0</TargetFramework>
-    <!--        <WarningsAsErrors>3239;0025</WarningsAsErrors>-->
     <PackageId>Partas.Solid.Primitives.ActiveElement</PackageId>
     <Title>Partas.Solid.Primitives.ActiveElement</Title>
-    <RootNamespace>Partas.Solid.Primitives.ActiveElement</RootNamespace>
-    <AssemblyName>Partas.Solid.Primitives.ActiveElement</AssemblyName>
     <Company>F# Community</Company>
     <Description>Bindings for Solid-js primitives</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,31 +13,29 @@
     <PackageTags>Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives</PackageTags>
     <Authors>Shayan Habibi</Authors>
     <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
-    <Version>0.1.1</Version>
-    <!--        <PackageReadmeFile>README.md</PackageReadmeFile>-->
-    <PackageVersion>0.1.1</PackageVersion>
-    <PackageReleaseNotes>Fix string literal path</PackageReleaseNotes>
+    <Version>0.2.0</Version>
+    <PackageVersion>0.2.0</PackageVersion>
+    <PackageReleaseNotes>Refactor of Primitives namespaces</PackageReleaseNotes>
     <NpmDependencies>
         <NpmPackage Name="@solid-primitives/active-element" Version=">= 0.1.0" />
     </NpmDependencies>
 </PropertyGroup>
 
 <ItemGroup>
-    <!--        <None Include="../README.md" Pack="true" PackagePath="\" />-->
     <Compile Include="Program.fs" />
 </ItemGroup>
 
 <ItemGroup>
     <PackageReference Include="Fable.Core" Version="4.5.0" />
     <PackageReference Include="Fable.Package.SDK" Version="1.3.1">
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <IncludeAssets>runtime; build; native; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Partas.Solid" Version="1.0.0-alpha4" />
+    <PackageReference Include="Partas.Solid" Version="1.*" />
 </ItemGroup>
 
 <ItemGroup>
-    <ProjectReference Include="..\Partas.Solid.Primitives\Partas.Solid.Primitives.fsproj" />
+    <ProjectReference Include="..\Partas.Solid.Primitives.Common\Partas.Solid.Primitives.Common.fsproj" />
 </ItemGroup>
 
 </Project>

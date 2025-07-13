@@ -1,14 +1,15 @@
-﻿namespace Partas.Solid.Primitives.Keyboard
+﻿namespace Partas.Solid.Primitives
 
-open Partas.Solid.Primitives
 open Partas.Solid
 open Fable.Core
 open Browser.Types
 
-[<Erase>]
-module Spec =
-    let [<Literal>] path = "@solid-primitives/keyboard"
-    let [<Literal>] version = ""
+[<Erase; AutoOpen>]
+module private KeyboardSpec =
+    [<Erase>]
+    module Spec =
+        let [<Literal>] path = "@solid-primitives/keyboard"
+        let [<Literal>] version = ""
     
 open Spec
 

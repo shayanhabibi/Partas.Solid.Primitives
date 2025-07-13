@@ -1,16 +1,17 @@
-﻿namespace Partas.Solid.Primitives.Spring
+﻿namespace Partas.Solid.Primitives
 
 open System.Runtime.CompilerServices
-open Partas.Solid.Primitives
 open Partas.Solid
 open Fable.Core
 open Fable.Core.JsInterop
 open Partas.Solid.Experimental.U
 
-[<Erase>]
-module Spec =
-    let [<Erase; Literal>] path = "@solid-primitives/spring"
-    let [<Erase; Literal>] version = "0.1.1"
+[<Erase; AutoOpen>]
+module private SpringSpec =
+    [<Erase>]
+    module Spec =
+        let [<Erase; Literal>] path = "@solid-primitives/spring"
+        let [<Erase; Literal>] version = "0.1.1"
 
 open Spec
 
