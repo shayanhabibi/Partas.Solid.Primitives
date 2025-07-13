@@ -2,6 +2,10 @@
 
 Monorepo containing version controlled projects for binding the primitives to be composed into higher order structures.
 
+The most up to date version of all primitive libraries is installable by directly installing `Partas.Solid.Primitives`.
+
+Alternatively, you can install each package individually. They are all accessible via the `Partas.Solid.Primitives` namespace.
+
 # Installation
 
 Each primitive library can be installed through your preferred package manager the usual way
