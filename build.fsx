@@ -402,7 +402,9 @@ Target.create Ops.AssemblyInfo (fun _ ->
                       (projectTargetProjects
                        |> List.find (_.Name >> (=) key)
                        |> _.Path)
-                      "AssemblyInfo.fs" ]
+                      (if key = Projects.projectPrimitives.Name
+                       then Path.combine Projects.projectPrimitives.Name.Value "AssemblyInfo.fs"
+                       else "AssemblyInfo.fs") ]
 
     projectTargetProjects
     |> List.iter (fun project ->

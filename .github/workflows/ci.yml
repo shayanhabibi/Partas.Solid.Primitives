@@ -39,6 +39,6 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Run ci script
-        run: dotnet fsi ./build.fsx target nuget --nuget-api-key ${{ env.NUGET_API_KEY }}
+        run: dotnet fsi ./build.fsx target publish --nuget-api-key ${{ env.NUGET_API_KEY }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
