@@ -1,4 +1,4 @@
-﻿#r "nuget: Partas.Fake.Tools.GitCliff,0.2.2"
+﻿#r "nuget: Partas.Fake.Tools.GitCliff, 0.2.3"
 #r "nuget: Str"
 #r "nuget: Fake.Tools.Git"
 
