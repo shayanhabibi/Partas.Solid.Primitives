@@ -1,10 +1,8 @@
-﻿#r "nuget: Partas.Fake.Tools.GitCliff"
-#r "nuget: EasyBuild.FileSystemProvider"
+﻿#r "nuget: Partas.Fake.Tools.GitCliff,0.2.2"
 #r "nuget: Str"
 #r "nuget: Fake.Tools.Git"
 
 open Fake.Tools
-open EasyBuild.FileSystemProvider
 
 type Files =
     static member ``cliff.toml`` = "cliff.toml"
@@ -136,9 +134,8 @@ module GitCliff =
 
     let bumpWithModifiedContext packageName initialVersion dir =
         let cliffPath = Path.combine dir Files.``cliff.toml``
-        if not <| File.exists cliffPath then
-            cliffPath
-            |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
+        cliffPath
+        |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
 
         let previousVersion, cliModifier = getModifiedContext packageName dir
 

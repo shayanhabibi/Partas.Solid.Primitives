@@ -10,7 +10,7 @@
 #r "nuget: Fake.Tools.Git"
 #r "nuget: Fake.Api.GitHub"
 #r "nuget: Fake.DotNet.Testing.Expecto"
-#r "nuget: Partas.Fake.Tools.GitCliff"
+#r "nuget: Partas.Fake.Tools.GitCliff,0.2.2"
 
 open System.Threading.Tasks
 open BuildUtils
