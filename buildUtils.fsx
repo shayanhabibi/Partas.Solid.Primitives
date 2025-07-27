@@ -145,9 +145,9 @@ module GitCliff =
             fun p ->
                 { p with
                     Bump = Some GitCliff.BumpStrategy.Auto
-                    FromContext = Files.``gitcliff-context.json``
                     Flags = [ GitCliff.Context ]
                     Output = Files.``gitcliff-context.json`` }
+            >> cliModifier
 
         GitCliff.run bumpedContextCliParams dir
 
@@ -159,13 +159,16 @@ module GitCliff =
             |> Option.flatten
 
         GitCliff.run
-            (fun p ->
-                { p with
-                    FromContext = Files.``gitcliff-context.json`` })
+            cliModifier
             dir
 
         File.delete Files.``gitcliff-context.json``
 
+        let files = [ Files.``cliff.toml``; Files.``RELEASE_NOTES.md`` ]
+        files
+        |> List.iter (Git.Staging.stageFile "" >> ignore)
+        files |> List.iter (Git.Commit.exec "")
+        
         match previousVersion, newVersion with
         | None, _ -> newVersion
         | Some v1, Some v2 when v1 <> v2 -> newVersion
@@ -173,9 +176,6 @@ module GitCliff =
         |> function
             | Some value -> value + PackageName.toTagSuffix packageName |> Git.Branches.tag ""
             | _ -> ()
-
-        [ Files.``cliff.toml``; Files.``RELEASE_NOTES.md`` ]
-        |> List.iter (Git.Staging.stageFile "" >> ignore)
 
 
 
