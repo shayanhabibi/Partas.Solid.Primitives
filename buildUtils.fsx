@@ -40,6 +40,7 @@ module GitCliff =
 
     let createConfig packageName (initialVersion: string option) : Config =
         { Config.Default with
+            Git.TagPattern = "*" + PackageName.toTagSuffix packageName
             Bump.InitialTag = initialVersion |> Option.defaultValue "0.1.0"
             Changelog.Body =
                 $$$"""{%- macro remote_url() -%}
@@ -118,7 +119,8 @@ module GitCliff =
             (fun p ->
                 { p with
                     Output = Files.``gitcliff-context.json``
-                    Flags = [ GitCliff.CliFlags.Context ] })
+                    Flags = [ GitCliff.CliFlags.Context ]
+                    Config = Files.``cliff.toml`` })
             dir
 
         validateContext packageName,
@@ -137,7 +139,7 @@ module GitCliff =
 
     let bumpWithModifiedContext packageName initialVersion dir =
         if not <| File.exists Files.``cliff.toml`` then
-            writeConfiguration (fun _ -> createConfig packageName initialVersion) dir
+            writeConfiguration (fun _ -> createConfig packageName initialVersion) Files.``cliff.toml``
 
         let previousVersion, cliModifier = getModifiedContext packageName dir
 
@@ -146,7 +148,8 @@ module GitCliff =
                 { p with
                     Bump = Some GitCliff.BumpStrategy.Auto
                     Flags = [ GitCliff.Context ]
-                    Output = Files.``gitcliff-context.json`` }
+                    Output = Files.``gitcliff-context.json``
+                    Config = Files.``cliff.toml`` }
             >> cliModifier
 
         GitCliff.run bumpedContextCliParams dir
@@ -167,7 +170,7 @@ module GitCliff =
         let files = [ Files.``cliff.toml``; Files.``RELEASE_NOTES.md`` ]
         files
         |> List.iter (Git.Staging.stageFile "" >> ignore)
-        files |> List.iter (Git.Commit.exec "")
+        Git.Commit.exec "" $"[skip ci]\n\nchore: update release notes for {packageName.Value}"
         
         match previousVersion, newVersion with
         | None, _ -> newVersion
