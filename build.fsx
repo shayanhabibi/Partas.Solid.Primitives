@@ -308,13 +308,12 @@ let description =
 
 let gitOwner = "shayanhabibi"
 let gitName = "Partas.Solid"
-let release = lazy ReleaseNotes.load "docs/RELEASE_NOTES.md"
 
 let releases =
     lazy
         projectTargetProjects
         |> List.map (fun project -> project.Name, $"{project.Name}/RELEASE_NOTES.md")
-        |> List.append [ PackageName.create "MAIN", "docs/RELEASE_NOTES.md" ]
+        |> List.append [ PackageName.create "MAIN", "./RELEASE_NOTES.md" ]
         |> List.map (fun keyVal -> fst keyVal, snd keyVal |> ReleaseNotes.load)
         |> dict
 
@@ -471,10 +470,12 @@ Target.create Ops.Nuget (fun _ ->
                 OutputPath = Some "bin"
                 DotNet.PackOptions.MSBuildParams.DisableInternalBinLog = true
                 DotNet.PackOptions.MSBuildParams.Properties =
-                    [ "PackageVersion", release.Value.AssemblyVersion
-                      "Version", release.Value.AssemblyVersion
+                    [ "PackageVersion", releases.Value[project.Name].AssemblyVersion
+                      "Version", releases.Value[project.Name].AssemblyVersion
                       if project.NpmPackage.IsSome && project.NpmPackageVersion.IsSome then
-                          createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] })))
+                          createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] }))
+    Git.Branches.push Repo.``.``
+    )
 
 Target.create Ops.Publish (fun _ ->
     !!"bin/*.nupkg"
