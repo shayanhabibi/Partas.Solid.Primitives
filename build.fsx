@@ -395,7 +395,14 @@ Target.create Ops.GitCliff (fun _ ->
     Git.Commit.execExtended __SOURCE_DIRECTORY__ "[skip ci]" "Release notes")
 // Generate assembly info file with versioning and up-to-date info
 Target.create Ops.AssemblyInfo (fun _ ->
-    let projects = releases.Value
+    let projects =
+        try
+        releases.Value
+        with e ->
+            !! "*/RELEASE_NOTES.md"
+            |> Seq.iter (File.readAsString >> Trace.log)
+            reraise()
+            
 
     let paths =
         dict
