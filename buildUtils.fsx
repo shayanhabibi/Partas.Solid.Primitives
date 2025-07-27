@@ -42,13 +42,9 @@ module GitCliff =
 {{%%- endmacro -%%}}
 
 {{%% if version -%%}}
-    ## [{{{{ version | trim_start_matches(pat=\"v\") | {PackageName.configVersionTrimmer packageName} }}}}] - {{ timestamp | date(format=\"%%Y-%%m-%%d\") }}
+    ## [{{{{ version | trim_start_matches(pat=\"v\") | {PackageName.configVersionTrimmer packageName} }}}}] - {{{{ timestamp | date(format=\"%%Y-%%m-%%d\") }}}}
 {{%% else -%%}}
-    <h2>
-
-        [Unreleased]
-    
-    </h2>
+    <h2><a href=\"{{{{ self::remote_url() }}}}/compare/{{{{ release.previous.version }}}}..HEAD\">Unreleased</a></h2>
 {{%% endif -%%}}
 
 {{%% for group, commits in commits | group_by(attribute=\"group\") %%}}

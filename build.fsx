@@ -343,7 +343,10 @@ let sourceFiles =
     -- "Partas.Solid.FablePlugin/Plugin.fs"
 
 // Check each project directory has a changelog config et al
-Target.create Ops.Prelude (fun _ ->
+Target.create Ops.Prelude (fun args ->
+    if args.Context.Arguments |> List.contains "--local"
+    then ()
+    else
     [ "config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\""
       "config --local user.name \"GitHub Action\"" ]
     |> List.iter (Git.CommandHelper.directRunGitCommandAndFail Repo.``.``)
