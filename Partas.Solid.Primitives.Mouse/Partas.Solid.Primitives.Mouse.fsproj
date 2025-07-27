@@ -23,6 +23,7 @@
 
     <ItemGroup>
         <Compile Include="Program.fs" />
+        <Compile Include="AssemblyInfo.fs" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Partas.Solid.Primitives.Common\Partas.Solid.Primitives.Common.fsproj" />

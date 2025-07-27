@@ -24,6 +24,7 @@
 
     <ItemGroup>
         <Compile Include="Program.fs" />
+        <Compile Include="AssemblyInfo.fs" />
     </ItemGroup>
 
     <ItemGroup>

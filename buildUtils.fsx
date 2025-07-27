@@ -131,8 +131,8 @@ module GitCliff =
 
     let bumpWithModifiedContext packageName initialVersion dir =
         let cliffPath = Path.combine dir Files.``cliff.toml``
-        cliffPath
-        |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
+        cliffPath |> File.delete
+        cliffPath |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
 
         let previousVersion, cliModifier = getModifiedContext packageName dir
 
