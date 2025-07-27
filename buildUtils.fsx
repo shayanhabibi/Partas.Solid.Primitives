@@ -129,7 +129,7 @@ module GitCliff =
 
     let runWithModifiedContext cliParams packageName initialVersion dir =
         if not <| File.exists Files.``cliff.toml`` then
-            writeConfiguration (fun _ -> createConfig packageName initialVersion) dir
+            writeConfiguration (fun _ -> createConfig packageName initialVersion) Files.``cliff.toml``
 
         let _, cliModifier = getModifiedContext packageName dir
         GitCliff.run (cliParams >> cliModifier) dir
