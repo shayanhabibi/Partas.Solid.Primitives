@@ -432,8 +432,7 @@ open FSharp.Collections
 Target.create Ops.Build (fun _ ->
 
     projectTargetProjects
-    |> List.toArray
-    |> Array.Parallel.iter (fun project ->
+    |> List.iter (fun project ->
         (
         if project.Path = ""
         then Path.combine project.Path project.Name.Value
