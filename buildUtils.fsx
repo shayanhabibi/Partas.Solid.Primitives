@@ -35,7 +35,6 @@ module GitCliff =
 
     let createConfig packageName (initialVersion: string option) : Config =
         { Config.Default with
-            Git.TagPattern = $"([0-9].*)*(?:%s{PackageName.toTagSuffix packageName})$"
             Bump.InitialTag = initialVersion |> Option.defaultValue "0.1.0"
             Changelog.Body =
                 $$$"""{%- macro remote_url() -%}
@@ -115,7 +114,8 @@ module GitCliff =
                 { p with
                     Output = Files.``gitcliff-context.json``
                     Flags = [ GitCliff.CliFlags.Context ]
-                    Config = Files.``cliff.toml`` })
+                    Config = Files.``cliff.toml``
+                    TagPattern = packageName |> PackageName.tagRegex })
             dir
 
         validateContext packageName dir,
