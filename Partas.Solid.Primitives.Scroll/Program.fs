@@ -7,8 +7,11 @@ open Fable.Core
 module private ScrollSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/scroll"
-        let [<Literal>] version = "2.1.0"
+        [<Literal>]
+        let path = "@solid-primitives/scroll"
+
+        [<Literal>]
+        let version = "2.1.0"
 
 open Spec
 
@@ -21,16 +24,19 @@ type ScrollPosition =
 type Scroll =
     /// Default target of window
     [<ImportMember(path)>]
-    static member createScrollPosition (): Accessor<ScrollPosition> = jsNative
+    static member createScrollPosition() : Accessor<ScrollPosition> = jsNative
+
     /// Element ref target or Accessor<#HtmlElement>
     [<ImportMember(path)>]
-    static member createScrollPosition (element: unit -> #HtmlElement): Accessor<ScrollPosition> = jsNative
+    static member createScrollPosition(element: unit -> #HtmlElement) : Accessor<ScrollPosition> = jsNative
+
     /// Returns reactive object with current window scroll position; signals and event-listeners are shared
     /// between dependendents making it more optimised to use in multiple places at once
     [<ImportMember(path)>]
-    static member useWindowScrollPosition (): ScrollPosition = jsNative
+    static member useWindowScrollPosition() : ScrollPosition = jsNative
+
     /// <summary>
     /// Gets a <c>ScrollPosition</c> element/window scroll position
     /// </summary>
     [<ImportMember(path)>]
-    static member getScrollPosition (): ScrollPosition = jsNative
+    static member getScrollPosition() : ScrollPosition = jsNative

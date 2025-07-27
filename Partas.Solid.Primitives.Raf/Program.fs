@@ -5,17 +5,22 @@ open Partas.Solid
 open Partas.Solid.Experimental.U
 
 [<Erase; AutoOpen>]
-module private RafSpec = 
+module private RafSpec =
     [<Erase>]
     module Spec =
-        let [<Erase; Literal>] path = "@solid-primitives/raf"
-        let [<Erase; Literal>] version = "2.3.1"
+        [<Erase; Literal>]
+        let path = "@solid-primitives/raf"
+
+        [<Erase; Literal>]
+        let version = "2.3.1"
 
 open Spec
 
 type FrameRequestCallback = float -> unit
+
 [<System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)>]
 type StartVoidFunction = (unit -> unit)
+
 [<System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)>]
 type StopVoidFunction = (unit -> unit)
 
@@ -24,6 +29,7 @@ type StopVoidFunction = (unit -> unit)
 type MsCounter =
     [<Emit("$0()")>]
     abstract member current: int with get
+
     abstract member reset: (unit -> unit) with get
     abstract member running: (unit -> bool) with get
     abstract member start: (unit -> unit) with get
@@ -50,7 +56,9 @@ type Raf =
     /// </code>
     /// </returns>
     [<Import("createRAF", path)>]
-    static member createRAF (callback: FrameRequestCallback) : Accessor<bool> * StartVoidFunction * StopVoidFunction = nativeOnly
+    static member createRAF(callback: FrameRequestCallback) : Accessor<bool> * StartVoidFunction * StopVoidFunction =
+        nativeOnly
+
     /// <summary>
     /// A primitive for wrapping <c>window.requestAnimationFrame</c> callback function to limit the execution of the callback to specified number of FPS.
     ///
@@ -71,7 +79,8 @@ type Raf =
     /// Wrapped RAF callback
     /// </returns>
     [<Import("targetFPS", path)>]
-    static member targetFPS (callback: FrameRequestCallback, fps: float) : FrameRequestCallback = nativeOnly
+    static member targetFPS(callback: FrameRequestCallback, fps: float) : FrameRequestCallback = nativeOnly
+
     /// <summary>
     /// A primitive for wrapping <c>window.requestAnimationFrame</c> callback function to limit the execution of the callback to specified number of FPS.
     ///
@@ -92,7 +101,8 @@ type Raf =
     /// Wrapped RAF callback
     /// </returns>
     [<Import("targetFPS", path)>]
-    static member targetFPS (callback: FrameRequestCallback, fps: Accessor<float>) : FrameRequestCallback = nativeOnly
+    static member targetFPS(callback: FrameRequestCallback, fps: Accessor<float>) : FrameRequestCallback = nativeOnly
+
     /// <summary>
     /// A primitive that creates a signal counting up milliseconds with a given frame rate to base your animations on.
     /// </summary>
@@ -119,4 +129,7 @@ type Raf =
     /// Contrary to the original implementation, the binding accesses the current value using <c>ms.current</c> instead of <c>ms()</c>
     /// </remarks>
     [<Import("createMs", path)>]
-    static member createMs (fps: U4<float, Accessor<float>, int, Accessor<int>>, ?limit: U4<float, Accessor<float>, int, Accessor<int>>): MsCounter = nativeOnly
+    static member createMs
+        (fps: U4<float, Accessor<float>, int, Accessor<int>>, ?limit: U4<float, Accessor<float>, int, Accessor<int>>)
+        : MsCounter =
+        nativeOnly

@@ -8,8 +8,11 @@ open Fable.Core
 module private IdleSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/idle"
-        let [<Literal>] version = "0.2.0"
+        [<Literal>]
+        let path = "@solid-primitives/idle"
+
+        [<Literal>]
+        let version = "0.2.0"
 
 open Spec
 
@@ -32,7 +35,8 @@ type IdleTimer =
 type Idle =
     /// Provides different accessors and methods to observe the user's idle status and react to its changing.
     [<ImportMember(path); ParamObject>]
-    static member createIdleTimer (
+    static member createIdleTimer
+        (
             ?idleTimeout: int,
             ?promptTimeout: int,
             ?onIdle: (Event -> unit),
@@ -41,4 +45,5 @@ type Idle =
             ?startManually: bool,
             ?events: Event[],
             ?element: HtmlElement
-        ): IdleTimer = jsNative
+        ) : IdleTimer =
+        jsNative

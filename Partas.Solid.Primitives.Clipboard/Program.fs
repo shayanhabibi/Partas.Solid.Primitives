@@ -8,8 +8,11 @@ open Browser.Types
 module private ClipboardSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/clipboard"
-        let [<Literal>] version = ""
+        [<Literal>]
+        let path = "@solid-primitives/clipboard"
+
+        [<Literal>]
+        let version = ""
 
 [<StringEnum>]
 type PresentationStyle =
@@ -35,8 +38,10 @@ type ClipboardResourceItem =
 type ClipboardResult =
     [<Emit("$0[0]")>]
     abstract member resourceItems: SolidResource<ClipboardResourceItem[]> with get
+
     [<Emit("$0[1]")>]
     abstract member refetch: (unit -> unit) with get
+
     [<Emit("$0[2]")>]
     abstract member write: (string -> JS.Promise<unit>) with get
 
@@ -65,7 +70,8 @@ type Clipboard =
     /// Provides a ClipboardItem object
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member newClipboardItem(``type``: string, data: obj): ClipboardItem = jsNative
+    static member newClipboardItem(``type``: string, data: obj) : ClipboardItem = jsNative
+
     /// <summary>
     /// Async read from the clipboard
     /// </summary>
@@ -73,8 +79,8 @@ type Clipboard =
     /// Promise of ClipboardItem array
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member readClipboard (): JS.Promise<ClipboardItem[]> = jsNative
-    
+    static member readClipboard() : JS.Promise<ClipboardItem[]> = jsNative
+
     /// <summary>
     /// Async write to the clipboard.<br/>The apostraphised version of the method will
     /// return the <c>Promise</c>.
@@ -83,7 +89,8 @@ type Clipboard =
     /// Data to write to the clipboard - either a string or ClipboardItem array.
     /// </param>
     [<ImportMember(Spec.path)>]
-    static member writeClipboard (data: string): unit = jsNative
+    static member writeClipboard(data: string) : unit = jsNative
+
     /// <summary>
     /// Async write to the clipboard.<br/>The apostraphised version of the method will
     /// return the <c>Promise</c>.
@@ -92,7 +99,8 @@ type Clipboard =
     /// Data to write to the clipboard - either a string or ClipboardItem array.
     /// </param>
     [<ImportMember(Spec.path)>]
-    static member writeClipboard (data: ClipboardItem[]): unit = jsNative
+    static member writeClipboard(data: ClipboardItem[]) : unit = jsNative
+
     /// <summary>
     /// Async write to the clipboard. <br/>The unapostraphised version discards the
     /// <c>Promise</c> for cleaner source
@@ -101,7 +109,8 @@ type Clipboard =
     /// Data to write to the clipboard - either a string or ClipboardItem array.
     /// </param>
     [<Import("writeClipboard", Spec.path)>]
-    static member writeClipboard'(data: string): JS.Promise<unit> = jsNative
+    static member writeClipboard'(data: string) : JS.Promise<unit> = jsNative
+
     /// <summary>
     /// Async write to the clipboard. <br/>The unapostraphised version discards the
     /// <c>Promise</c> for cleaner source
@@ -110,7 +119,8 @@ type Clipboard =
     /// Data to write to the clipboard - either a string or ClipboardItem array.
     /// </param>
     [<Import("writeClipboard", Spec.path)>]
-    static member writeClipboard'(data: ClipboardItem[]): JS.Promise<unit> = jsNative 
+    static member writeClipboard'(data: ClipboardItem[]) : JS.Promise<unit> = jsNative
+
     /// <summary>
     /// Creates a new reactive primitive for managing the clipboard.
     /// </summary>
@@ -128,7 +138,8 @@ type Clipboard =
     /// Returns a resource representing the clipboard elements and children.
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member createClipboard (?data: Accessor<string>, ?deferInitial: bool): ClipboardResult = jsNative
+    static member createClipboard(?data: Accessor<string>, ?deferInitial: bool) : ClipboardResult = jsNative
+
     /// <summary>
     /// Creates a new reactive primitive for managing the clipboard.
     /// </summary>
@@ -145,17 +156,25 @@ type Clipboard =
     /// <returns>
     /// Returns a resource representing the clipboard elements and children.
     /// </returns>
-    static member createClipboard (?data: Accessor<ClipboardItem[]>, ?deferInitial: bool): ClipboardResult = jsNative
+    static member createClipboard(?data: Accessor<ClipboardItem[]>, ?deferInitial: bool) : ClipboardResult = jsNative
+
     /// <summary>
     /// Same as <c>createClipboard</c> except it returns the result ready for
     /// destructuring in F#
     /// </summary>
     [<ImportMember(Spec.path)>]
-    static member createClipboard' (?data: Accessor<string>, ?deferInitial: bool): SolidResource<ClipboardResourceItem[]> * (unit -> unit) * (string -> JS.Promise<unit>) = jsNative
+    static member createClipboard'
+        (?data: Accessor<string>, ?deferInitial: bool)
+        : SolidResource<ClipboardResourceItem[]> * (unit -> unit) * (string -> JS.Promise<unit>) =
+        jsNative
+
     /// <summary>
     /// Same as <c>createClipboard</c> except it returns the result ready for
     /// destructuring in F#
     /// </summary>
-    static member createClipboard' (?data: Accessor<ClipboardItem[]>, ?deferInitial: bool): SolidResource<ClipboardResourceItem[]> * (unit -> unit) * (string -> JS.Promise<unit>) = jsNative
-    // [<ImportMember(Spec.path)>] // Directive
-    // static member copyToClipboard () = jsNative
+    static member createClipboard'
+        (?data: Accessor<ClipboardItem[]>, ?deferInitial: bool)
+        : SolidResource<ClipboardResourceItem[]> * (unit -> unit) * (string -> JS.Promise<unit>) =
+        jsNative
+// [<ImportMember(Spec.path)>] // Directive
+// static member copyToClipboard () = jsNative

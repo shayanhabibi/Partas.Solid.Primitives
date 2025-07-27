@@ -8,7 +8,8 @@ open Browser.Types
 module private EventListenerSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/event-listener"
+        [<Literal>]
+        let path = "@solid-primitives/event-listener"
 
 [<Erase; AutoOpen>]
 type EventListener =
@@ -42,11 +43,11 @@ type EventListener =
     /// Function clearing all event listeners form targets
     /// </returns>
     [<ImportMember(Spec.path); ParamObject(3)>]
-    static member makeEventListener(
-        target: #Element,
-        ``type``: string,
-        handler: Event -> unit,
-        ?capture: bool, ?once: bool, ?passive: bool): DisposeCallback = jsNative
+    static member makeEventListener
+        (target: #Element, ``type``: string, handler: Event -> unit, ?capture: bool, ?once: bool, ?passive: bool)
+        : DisposeCallback =
+        jsNative
+
     /// <summary>
     /// Creates an event listener, that will be automatically disposed on cleanup.
     /// </summary>
@@ -71,11 +72,11 @@ type EventListener =
     /// Function clearing all event listeners form targets
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member makeEventListener(
-        target: #Element,
-        ``type``: string,
-        handler: Event -> unit,
-        options: AddEventListenerOptions): DisposeCallback = jsNative
+    static member makeEventListener
+        (target: #Element, ``type``: string, handler: Event -> unit, options: AddEventListenerOptions)
+        : DisposeCallback =
+        jsNative
+
     /// <summary>
     /// Creates a reactive event listener, that will be automatically disposed on cleanup,
     /// and can take reactive arguments to attach listeners to new targets once changed.
@@ -107,17 +108,27 @@ type EventListener =
     /// addEventListener options
     /// </param>
     [<ImportMember(Spec.path); ParamObject(3)>]
-    static member createEventListener(
-        target: #Element,
-        ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
-        handler: Event -> unit,
-        ?capture: bool, ?once: bool, ?passive: bool): unit = jsNative
+    static member createEventListener
+        (
+            target: #Element,
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            ?capture: bool,
+            ?once: bool,
+            ?passive: bool
+        ) : unit =
+        jsNative
+
     [<ImportMember(Spec.path)>]
-    static member createEventListener(
-        target: #Element,
-        ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
-        handler: Event -> unit,
-        options: AddEventListenerOptions): unit = jsNative
+    static member createEventListener
+        (
+            target: #Element,
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            options: AddEventListenerOptions
+        ) : unit =
+        jsNative
+
     /// <summary>
     /// Creates a reactive event listener, that will be automatically disposed on cleanup,
     /// and can take reactive arguments to attach listeners to new targets once changed.
@@ -149,9 +160,27 @@ type EventListener =
     /// addEventListener options
     /// </param>
     [<ImportMember(Spec.path); ParamObject(3)>]
-    static member createEventListener(target: #Element[], ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>, handler: Event -> unit, ?capture: bool, ?once: bool, ?passive: bool): unit = jsNative
+    static member createEventListener
+        (
+            target: #Element[],
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            ?capture: bool,
+            ?once: bool,
+            ?passive: bool
+        ) : unit =
+        jsNative
+
     [<ImportMember(Spec.path)>]
-    static member createEventListener(target: #Element[], ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>, handler: Event -> unit, options: AddEventListenerOptions): unit = jsNative
+    static member createEventListener
+        (
+            target: #Element[],
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            options: AddEventListenerOptions
+        ) : unit =
+        jsNative
+
     /// <summary>
     /// Creates a reactive event listener, that will be automatically disposed on cleanup,
     /// and can take reactive arguments to attach listeners to new targets once changed.
@@ -183,9 +212,27 @@ type EventListener =
     /// addEventListener options
     /// </param>
     [<ImportMember(Spec.path); ParamObject(3)>]
-    static member createEventListener(target: Accessor<#Element>, ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>, handler: Event -> unit, ?capture: bool, ?once: bool, ?passive: bool): unit = jsNative
+    static member createEventListener
+        (
+            target: Accessor<#Element>,
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            ?capture: bool,
+            ?once: bool,
+            ?passive: bool
+        ) : unit =
+        jsNative
+
     [<ImportMember(Spec.path)>]
-    static member createEventListener(target: Accessor<#Element>, ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>, handler: Event -> unit, options: AddEventListenerOptions): unit = jsNative
+    static member createEventListener
+        (
+            target: Accessor<#Element>,
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            options: AddEventListenerOptions
+        ) : unit =
+        jsNative
+
     /// <summary>
     /// Creates a reactive event listener, that will be automatically disposed on cleanup,
     /// and can take reactive arguments to attach listeners to new targets once changed.
@@ -217,9 +264,27 @@ type EventListener =
     /// addEventListener options
     /// </param>
     [<ImportMember(Spec.path); ParamObject(3)>]
-    static member createEventListener(target: Accessor<#Element[]>, ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>, handler: Event -> unit, ?capture: bool, ?once: bool, ?passive: bool): unit = jsNative
+    static member createEventListener
+        (
+            target: Accessor<#Element[]>,
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            ?capture: bool,
+            ?once: bool,
+            ?passive: bool
+        ) : unit =
+        jsNative
+
     [<ImportMember(Spec.path)>]
-    static member createEventListener(target: Accessor<#Element[]>, ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>, handler: Event -> unit, options: AddEventListenerOptions): unit = jsNative
+    static member createEventListener
+        (
+            target: Accessor<#Element[]>,
+            ``type``: U4<string, string[], Accessor<string>, Accessor<string[]>>,
+            handler: Event -> unit,
+            options: AddEventListenerOptions
+        ) : unit =
+        jsNative
+
     /// <summary>
     /// Provides an reactive signal of last captured event.
     /// </summary>
@@ -249,4 +314,4 @@ type EventListener =
     /// Signal of last captured event and function clearing all event listeners
     /// </returns>
     [<ImportMember(Spec.path); System.Obsolete("Unimplemented")>]
-    static member createEventSignal([<System.ParamArray>] arguments: obj[]): obj = jsNative
+    static member createEventSignal([<System.ParamArray>] arguments: obj[]) : obj = jsNative

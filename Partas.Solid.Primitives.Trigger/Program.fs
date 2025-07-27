@@ -5,18 +5,28 @@ open Fable.Core.JS
 open System.Runtime.CompilerServices
 
 [<Erase; AutoOpen>]
-module private TriggerSpec = 
+module private TriggerSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/trigger"
-    
+        [<Literal>]
+        let path = "@solid-primitives/trigger"
+
 open Spec
 
-type [<Erase>] Track<'T> = 'T -> unit
-type [<Erase>] Dirty<'T> = 'T -> unit
-type [<Erase>] DirtyAll = unit -> unit
-type [<Erase>] TriggerSignal<'T> = Track<'T> * Dirty<'T>
-type [<Erase>] TriggerCacheSignal<'T> = Track<'T> * Dirty<'T> * DirtyAll
+[<Erase>]
+type Track<'T> = 'T -> unit
+
+[<Erase>]
+type Dirty<'T> = 'T -> unit
+
+[<Erase>]
+type DirtyAll = unit -> unit
+
+[<Erase>]
+type TriggerSignal<'T> = Track<'T> * Dirty<'T>
+
+[<Erase>]
+type TriggerCacheSignal<'T> = Track<'T> * Dirty<'T> * DirtyAll
 
 [<AutoOpen; Erase>]
 type Extensions =
@@ -26,14 +36,15 @@ type Extensions =
     /// <param name="triggerCache"></param>
     /// <param name="key">the key</param>
     [<Erase; Extension>]
-    static member track (triggerCache: TriggerCacheSignal<'T>, key: 'T): unit = undefined
+    static member track(triggerCache: TriggerCacheSignal<'T>, key: 'T) : unit = undefined
+
     /// <summary>
     /// Will trigger the tracker for the given key of the cache
     /// </summary>
     /// <param name="triggerCache"></param>
     /// <param name="key">the key</param>
     [<Erase; Extension>]
-    static member dirty (triggerCache: TriggerCacheSignal<'T>, key: 'T): unit = undefined
+    static member dirty(triggerCache: TriggerCacheSignal<'T>, key: 'T) : unit = undefined
 
 [<Erase; AutoOpen>]
 type Trigger =
@@ -50,7 +61,8 @@ type Trigger =
     /// dirty()
     /// </code></example>
     [<ImportMember(path)>]
-    static member createTrigger (): TriggerSignal<unit> = jsNative
+    static member createTrigger() : TriggerSignal<unit> = jsNative
+
     /// <summary>
     /// Creates a cache of triggers that can be used to mark dirty only specific keys.
     /// <br/><br/>Cache is a Map or WeakMap depending on the mapConstructor argument. (default: Map)
@@ -67,4 +79,4 @@ type Trigger =
     /// map.dirty(1)
     /// </code></example>
     [<ImportMember(path)>]
-    static member createTriggerCache<'T> (): TriggerCacheSignal<'T> = jsNative
+    static member createTriggerCache<'T>() : TriggerCacheSignal<'T> = jsNative

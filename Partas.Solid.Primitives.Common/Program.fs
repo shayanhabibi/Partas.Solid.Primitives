@@ -5,7 +5,10 @@ open Fable.Core
 
 [<Erase>]
 module Spec =
-    let [<Literal>] primitives = "@solid-primitives/"
-    let [<Literal>] utils = primitives + "utils"
+    [<Literal>]
+    let primitives = "@solid-primitives/"
+
+    [<Literal>]
+    let utils = primitives + "utils"
 
 type DisposeCallback = unit -> unit

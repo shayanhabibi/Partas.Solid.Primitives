@@ -7,7 +7,8 @@ open Fable.Core
 module private AutoFocusSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/autofocus"
+        [<Literal>]
+        let path = "@solid-primitives/autofocus"
 
 [<Erase; AutoOpen>]
 type AutoFocus =
@@ -26,7 +27,7 @@ type AutoFocus =
     /// </example>
     [<ImportMember(Spec.path)>]
     static member autofocus = jsNative
-    
+
     /// <summary>
     /// Reactively autofocuses an element passid in as a signal
     /// </summary>
@@ -35,14 +36,14 @@ type AutoFocus =
     /// // Using ref
     /// let ref!: HTMLButtonElement;
     /// createAutofocus(() => ref);
-    /// 
+    ///
     /// /button ref={ref}>Autofocused /button>;
-    /// 
+    ///
     /// // Using ref signal
     /// const [ref, setRef] = createSignal /HTMLButtonElement>();
     /// createAutofocus(ref);
-    /// 
+    ///
     /// /button ref={setRef}>Autofocused /button>;
     /// </code></example>
     [<ImportMember(Spec.path)>]
-    static member createAutofocus (ref: unit -> #HtmlElement): unit = jsNative
+    static member createAutofocus(ref: unit -> #HtmlElement) : unit = jsNative

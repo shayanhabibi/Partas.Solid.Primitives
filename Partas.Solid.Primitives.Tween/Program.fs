@@ -8,8 +8,11 @@ open Fable.Core.JS
 module private TweenSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/tween"
-        let [<Literal>] version = "1.4.0"
+        [<Literal>]
+        let path = "@solid-primitives/tween"
+
+        [<Literal>]
+        let version = "1.4.0"
 
 open Spec
 
@@ -20,69 +23,143 @@ open Spec
 /// </code>
 /// </summary>
 type Easing = (float -> float)
+
 /// Contains typical easing functions
 [<Erase; AutoOpen>]
 module Easing =
-    let easeInSine: Easing = fun x -> 1. - Math.cos((x * Math.PI) / 2.)
-    let easeOutSine: Easing = fun x  -> Math.sin((x * Math.PI) / 2.)
-    let easeInOutSine: Easing = fun x -> -(Math.cos(Math.PI  * x) - 1.) / 2.
+    let easeInSine: Easing = fun x -> 1. - Math.cos ((x * Math.PI) / 2.)
+    let easeOutSine: Easing = fun x -> Math.sin ((x * Math.PI) / 2.)
+    let easeInOutSine: Easing = fun x -> -(Math.cos (Math.PI * x) - 1.) / 2.
     let easeInQuad: Easing = fun x -> x * x
     let easeOutQuad: Easing = fun x -> 1. - (1. - x) * (1. - x)
-    let easeInOutQuad: Easing = fun x -> if x < 0.5 then 2. * x * x else 1. - (-2. * x + 2.) * (-2. * x + 2.) / 2.
+
+    let easeInOutQuad: Easing =
+        fun x ->
+            if x < 0.5 then
+                2. * x * x
+            else
+                1. - (-2. * x + 2.) * (-2. * x + 2.) / 2.
+
     let easeInCubic: Easing = fun x -> x * x * x
     let easeOutCubic: Easing = fun x -> 1. - (1. - x) * (1. - x) * (1. - x)
-    let easeInOutCubic: Easing = fun x -> if x < 0.5 then 4. * x * x * x else 1. - (-2. * x + 2.) ** 3. / 2.
+
+    let easeInOutCubic: Easing =
+        fun x ->
+            if x < 0.5 then
+                4. * x * x * x
+            else
+                1. - (-2. * x + 2.) ** 3. / 2.
+
     let easeInQuart: Easing = fun x -> x * x * x * x
     let easeOutQuart: Easing = fun x -> 1. - (1. - x) ** 4.
-    let easeInOutQuart: Easing = fun x -> if x < 0.5 then 8. * x * x * x * x else 1. - (-2. * x + 2.) ** 4. / 2.
+
+    let easeInOutQuart: Easing =
+        fun x ->
+            if x < 0.5 then
+                8. * x * x * x * x
+            else
+                1. - (-2. * x + 2.) ** 4. / 2.
+
     let easeInQuint: Easing = fun x -> x * x * x * x * x
     let easeOutQuint: Easing = fun x -> 1. - (1. - x) ** 5.
-    let easeInOutQuint: Easing = fun x -> if x < 0.5 then 16. * x * x * x * x * x else 1. - (-2. * x + 2.) ** 5. / 2.
+
+    let easeInOutQuint: Easing =
+        fun x ->
+            if x < 0.5 then
+                16. * x * x * x * x * x
+            else
+                1. - (-2. * x + 2.) ** 5. / 2.
+
     let easeInExpo: Easing = fun x -> if x = 0. then 0. else 2. ** (10. * x - 10.)
     let easeOutExpo: Easing = fun x -> if x = 1. then 1. else 1. - 2. ** (-10. * x)
-    let easeInOutExpo: Easing = fun x -> 
-        if x = 0. then 0.
-        elif x = 1. then 1.
-        else if x < 0.5 then 2. ** (20. * x - 10.) / 2. else (2. - 2. ** (-20. * x + 10.)) / 2.
-    let easeInCirc: Easing = fun x -> 1. - Math.sqrt(1. - x * x)
-    let easeOutCirc: Easing = fun x -> Math.sqrt(1. - (x - 1.) * (x - 1.))
-    let easeInOutCirc: Easing = fun x -> 
-        if x < 0.5 then (1. - Math.sqrt(1. - (2. * x) ** 2.)) / 2. else (Math.sqrt(1. - (-2. * x + 2.) ** 2.) + 1.) / 2.
+
+    let easeInOutExpo: Easing =
+        fun x ->
+            if x = 0. then 0.
+            elif x = 1. then 1.
+            else if x < 0.5 then 2. ** (20. * x - 10.) / 2.
+            else (2. - 2. ** (-20. * x + 10.)) / 2.
+
+    let easeInCirc: Easing = fun x -> 1. - Math.sqrt (1. - x * x)
+    let easeOutCirc: Easing = fun x -> Math.sqrt (1. - (x - 1.) * (x - 1.))
+
+    let easeInOutCirc: Easing =
+        fun x ->
+            if x < 0.5 then
+                (1. - Math.sqrt (1. - (2. * x) ** 2.)) / 2.
+            else
+                (Math.sqrt (1. - (-2. * x + 2.) ** 2.) + 1.) / 2.
 
     let easeInBack: Easing = fun x -> let c1 = 1.70158 in c1 * x * x * x - c1 * x * x
-    let easeOutBack: Easing = fun x -> let c1 = 1.70158 in 1. + c1 * (x - 1.) * (x - 1.) * (x - 1.) + c1 * (x - 1.) * (x - 1.)
-    let easeInOutBack: Easing = fun x -> 
-        let c2 = 2.5949095
-        if x < 0.5 then (c2 * (2. * x) * (2. * x) * (2. * x) - c2 * (2. * x) * (2. * x)) / 2. 
-        else (c2 * (-2. * x + 2.) * (-2. * x + 2.) * (-2. * x + 2.) + c2 * (-2. * x + 2.) * (-2. * x + 2.) + 2.) / 2.
 
-    let easeInElastic: Easing = fun x -> 
-        if x = 0. then 0.
-        elif x = 1. then 1.
-        else -2. ** (10. * x - 10.) * Math.sin((x * 10. - 10.75) * (2. * Math.PI) / 3.)
+    let easeOutBack: Easing =
+        fun x -> let c1 = 1.70158 in 1. + c1 * (x - 1.) * (x - 1.) * (x - 1.) + c1 * (x - 1.) * (x - 1.)
 
-    let easeOutElastic: Easing = fun x -> 
-        if x = 0. then 0.
-        elif x = 1. then 1.
-        else 2. ** (-10. * x) * Math.sin((x * 10. - 0.75) * (2. * Math.PI) / 3.) + 1.
+    let easeInOutBack: Easing =
+        fun x ->
+            let c2 = 2.5949095
 
-    let easeInOutElastic: Easing = fun x -> 
-        if x = 0. then 0.
-        elif x = 1. then 1.
-        else if x < 0.5 then (-2. ** (20. * x - 10.) * Math.sin((20. * x - 11.125) * (2. * Math.PI) / 4.5)) / 2.
-        else (2. ** (-20. * x + 10.) * Math.sin((20. * x - 11.125) * (2. * Math.PI) / 4.5)) / 2. + 1.
+            if x < 0.5 then
+                (c2 * (2. * x) * (2. * x) * (2. * x) - c2 * (2. * x) * (2. * x)) / 2.
+            else
+                (c2 * (-2. * x + 2.) * (-2. * x + 2.) * (-2. * x + 2.)
+                 + c2 * (-2. * x + 2.) * (-2. * x + 2.)
+                 + 2.)
+                / 2.
 
-    let easeOutBounce: Easing = fun x -> 
-        if x < 1. / 2.75 then 7.5625 * x * x
-        elif x < 2. / 2.75 then 7.5625 * (x - 1.5 / 2.75) * (x - 1.5 / 2.75) + 0.75
-        elif x < 2.5 / 2.75 then 7.5625 * (x - 2.25 / 2.75) * (x - 2.25 / 2.75) + 0.9375
-        else 7.5625 * (x - 2.625 / 2.75) * (x - 2.625 / 2.75) + 0.984375
-    let easeInBounce: Easing = fun x -> 1. - easeOutBounce(1. - x)
+    let easeInElastic: Easing =
+        fun x ->
+            if x = 0. then
+                0.
+            elif x = 1. then
+                1.
+            else
+                -2. ** (10. * x - 10.) * Math.sin ((x * 10. - 10.75) * (2. * Math.PI) / 3.)
 
-    let easeInOutBounce: Easing = fun x -> 
-        if x < 0.5 then (1. - easeOutBounce(1. - 2. * x)) / 2.
-        else (1. + easeOutBounce(2. * x - 1.)) / 2.
-    let easeLinear:  Easing = id
+    let easeOutElastic: Easing =
+        fun x ->
+            if x = 0. then
+                0.
+            elif x = 1. then
+                1.
+            else
+                2. ** (-10. * x) * Math.sin ((x * 10. - 0.75) * (2. * Math.PI) / 3.) + 1.
+
+    let easeInOutElastic: Easing =
+        fun x ->
+            if x = 0. then
+                0.
+            elif x = 1. then
+                1.
+            else if x < 0.5 then
+                (-2. ** (20. * x - 10.) * Math.sin ((20. * x - 11.125) * (2. * Math.PI) / 4.5))
+                / 2.
+            else
+                (2. ** (-20. * x + 10.) * Math.sin ((20. * x - 11.125) * (2. * Math.PI) / 4.5))
+                / 2.
+                + 1.
+
+    let easeOutBounce: Easing =
+        fun x ->
+            if x < 1. / 2.75 then
+                7.5625 * x * x
+            elif x < 2. / 2.75 then
+                7.5625 * (x - 1.5 / 2.75) * (x - 1.5 / 2.75) + 0.75
+            elif x < 2.5 / 2.75 then
+                7.5625 * (x - 2.25 / 2.75) * (x - 2.25 / 2.75) + 0.9375
+            else
+                7.5625 * (x - 2.625 / 2.75) * (x - 2.625 / 2.75) + 0.984375
+
+    let easeInBounce: Easing = fun x -> 1. - easeOutBounce (1. - x)
+
+    let easeInOutBounce: Easing =
+        fun x ->
+            if x < 0.5 then
+                (1. - easeOutBounce (1. - 2. * x)) / 2.
+            else
+                (1. + easeOutBounce (2. * x - 1.)) / 2.
+
+    let easeLinear: Easing = id
 
 [<Erase; AutoOpen>]
 type Tween =
@@ -97,7 +174,8 @@ type Tween =
     /// <br/><br/>Internally, createTween uses requestAnimationFrame to smoothly update the tweened value at the display refresh rate. After the tweened value reaches the underlying signal value, it will stop updating via requestAnimationFrame for efficiency.
     /// </summary>
     [<ImportMember(path); ParamObject(1)>]
-    static member createTween(target: Accessor<'T>, ?duration: int, ?easing: Easing): Accessor<'T> = jsNative
+    static member createTween(target: Accessor<'T>, ?duration: int, ?easing: Easing) : Accessor<'T> = jsNative
+
     /// <summary>
     /// Creates an efficient tweening derived signal that smoothly transitions a given signal from its previous value to its next value whenever it changes.
     /// <br/>
@@ -109,5 +187,4 @@ type Tween =
     /// <br/><br/>Internally, createTween uses requestAnimationFrame to smoothly update the tweened value at the display refresh rate. After the tweened value reaches the underlying signal value, it will stop updating via requestAnimationFrame for efficiency.
     /// </summary>
     [<ImportMember(path)>]
-    static member createTween(target: Accessor<'T>): Accessor<'T> = jsNative
-    
+    static member createTween(target: Accessor<'T>) : Accessor<'T> = jsNative

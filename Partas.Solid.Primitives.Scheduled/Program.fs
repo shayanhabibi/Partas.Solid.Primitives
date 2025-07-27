@@ -3,34 +3,46 @@
 open Fable.Core
 
 [<Erase; AutoOpen>]
-module private ScheduledSpec = 
+module private ScheduledSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/scheduled"
-        let [<Literal>] version = "1.5.0"
+        [<Literal>]
+        let path = "@solid-primitives/scheduled"
+
+        [<Literal>]
+        let version = "1.5.0"
 
 open Spec
 
-    
+
 [<AllowNullLiteral; Interface>]
 type Schedule<'T> =
     [<Emit("$0($1)")>]
     abstract member exec: 'T -> unit
-    abstract member clear: unit -> unit with get  
+
+    abstract member clear: unit -> unit with get
 
 type DebounceOrThrottle<'T> = ('T -> unit) * int -> Schedule<'T>
 
 [<Erase>]
 type Scheduled =
     [<ImportMember(path)>]
-    static member debounce (callback: 'T -> unit, timespan: int): Schedule<'T> = jsNative
+    static member debounce(callback: 'T -> unit, timespan: int) : Schedule<'T> = jsNative
+
     [<ImportMember(path)>]
-    static member throttle (callback: 'T -> unit, timespan: int): Schedule<'T> = jsNative
+    static member throttle(callback: 'T -> unit, timespan: int) : Schedule<'T> = jsNative
+
     [<ImportMember(path)>]
-    static member scheduleIdle (callback: 'T -> unit, timespan: int): Schedule<'T> = jsNative
+    static member scheduleIdle(callback: 'T -> unit, timespan: int) : Schedule<'T> = jsNative
+
     [<ImportMember(path)>]
-    static member leading(debOrThrot: DebounceOrThrottle<'T>, callback: 'T -> unit, timespan: int): Schedule<'T> = jsNative
+    static member leading(debOrThrot: DebounceOrThrottle<'T>, callback: 'T -> unit, timespan: int) : Schedule<'T> =
+        jsNative
+
     [<ImportMember(path)>]
-    static member leadingAndTrailing (debOrThrot: DebounceOrThrottle<'T>, callback: 'T -> unit, timespan: int): Schedule<'T> = jsNative
-    // [<ImportMember(path)>]
-    // static member createScheduled (schedule: ('T -> unit) -> ()
+    static member leadingAndTrailing
+        (debOrThrot: DebounceOrThrottle<'T>, callback: 'T -> unit, timespan: int)
+        : Schedule<'T> =
+        jsNative
+// [<ImportMember(path)>]
+// static member createScheduled (schedule: ('T -> unit) -> ()

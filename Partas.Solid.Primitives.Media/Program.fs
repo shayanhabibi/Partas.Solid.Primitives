@@ -7,15 +7,18 @@ open Fable.Core
 module private MediaSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/media"
-        let [<Literal>] version = ""
+        [<Literal>]
+        let path = "@solid-primitives/media"
+
+        [<Literal>]
+        let version = ""
 
 open Spec
 
 [<Erase>]
 type BreakpointMonitor<'T> =
     member inline this.obj = unbox<'T> this
-    member _.key with get(): string = jsNative
+    member _.key: string = jsNative
 
 [<Erase>]
 type MediaQuery = (unit -> bool)
@@ -28,15 +31,19 @@ type MediaQueryEvent =
 [<Erase; AutoOpen>]
 type Media =
     [<ImportMember(path)>]
-    static member makeMediaQueryListener(query: string) (handler: MediaQueryEvent -> unit): DisposeCallback = jsNative
-    [<ImportMember(path)>]
-    static member createMediaQuery (query: string, ?serverFallback: bool): MediaQuery = jsNative
-    [<ImportMember(path)>]
-    static member createBreakpoints (queryMonitor: 'T): BreakpointMonitor<'T> = jsNative
-    [<ImportMember(path)>]
-    static member sortBreakpoints (breakpoints: 'T): 'T = jsNative
-    [<ImportMember(path)>]
-    static member createPrefersDark (?fallback: bool): MediaQuery = jsNative
-    [<ImportMember(path)>]
-    static member usePrefersDark (): MediaQuery = jsNative
+    static member makeMediaQueryListener (query: string) (handler: MediaQueryEvent -> unit) : DisposeCallback = jsNative
 
+    [<ImportMember(path)>]
+    static member createMediaQuery(query: string, ?serverFallback: bool) : MediaQuery = jsNative
+
+    [<ImportMember(path)>]
+    static member createBreakpoints(queryMonitor: 'T) : BreakpointMonitor<'T> = jsNative
+
+    [<ImportMember(path)>]
+    static member sortBreakpoints(breakpoints: 'T) : 'T = jsNative
+
+    [<ImportMember(path)>]
+    static member createPrefersDark(?fallback: bool) : MediaQuery = jsNative
+
+    [<ImportMember(path)>]
+    static member usePrefersDark() : MediaQuery = jsNative

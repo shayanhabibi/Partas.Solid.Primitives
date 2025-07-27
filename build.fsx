@@ -15,20 +15,21 @@
 open System.Threading.Tasks
 open BuildUtils
 
-let [<Literal>] baseName = "Partas.Solid.Primitives" 
+[<Literal>]
+let baseName = "Partas.Solid.Primitives"
 
-type Project = {
-    Path: string
-    Name: PackageName
-    Description: string
-    NpmPackage: string option
-    NpmPackageVersion: string option
-    Tags: string
-    InitialVersion: string option
-}
+type Project =
+    { Path: string
+      Name: PackageName
+      Description: string
+      NpmPackage: string option
+      NpmPackageVersion: string option
+      Tags: string
+      InitialVersion: string option }
 
 open EasyBuild.FileSystemProvider
 type Repo = AbsoluteFileSystem<__SOURCE_DIRECTORY__>
+
 type BuildRepo =
     VirtualFileSystem<
         __SOURCE_DIRECTORY__,
@@ -37,10 +38,13 @@ docs
     RELEASE_NOTES.md
 Common
     AssemblyFile.fs
-""">
+"""
+     >
 
 module Projects =
-    let private tags = "Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives"
+    let private tags =
+        "Partas;Oxpecker;F#;FSharp;Fable;fable-javascript;Web;Framework;Solid;Solidjs;Bindings;Primitives"
+
     let private makeProject name path =
         { Path = path
           Name = baseName + "." + name |> PackageName.create
@@ -49,163 +53,195 @@ module Projects =
           NpmPackageVersion = None
           NpmPackage = None
           InitialVersion = None }
-    let private withPackage package project = { project with NpmPackage = Some package }
-    let private withPackageVersion version project = { project with NpmPackageVersion = "@solid-primitives/" + version |> Some }
-    let private withDescription description project = { project with Description = description }
-    let private withInitialVersion version project = { project with InitialVersion = Some version }
-    
+
+    let private withPackage package project =
+        { project with
+            NpmPackage = Some package }
+
+    let private withPackageVersion version project =
+        { project with
+            NpmPackageVersion = "@solid-primitives/" + version |> Some }
+
+    let private withDescription description project =
+        { project with
+            Description = description }
+
+    let private withInitialVersion version project =
+        { project with
+            InitialVersion = Some version }
+
     let common =
         Repo.``Partas.Solid.Primitives.Common``.ToString()
         |> makeProject "Common"
         |> withDescription "Common methods, functions, types and bindings for the Partas.Solid.Primitives bindings"
         |> withInitialVersion "0.1.0"
+
     let activeElement =
         Repo.``Partas.Solid.Primitives.ActiveElement``.ToString()
         |> makeProject "ActiveElement"
         |> withPackageVersion "0.1.0"
         |> withPackage "active-element"
         |> withInitialVersion "0.2.0"
+
     let audio =
         Repo.``Partas.Solid.Primitives.Audio``.``.``
         |> makeProject "Audio"
         |> withPackageVersion "1.4.1"
         |> withPackage "audio"
         |> withInitialVersion "0.1.0"
+
     let autoFocus =
         Repo.``Partas.Solid.Primitives.AutoFocus``.``.``
         |> makeProject "AutoFocus"
         |> withPackageVersion "0.1.0"
         |> withPackage "autofocus"
         |> withInitialVersion "0.2.0"
+
     let bounds =
         Repo.``Partas.Solid.Primitives.Bounds``.``.``
         |> makeProject "Bounds"
         |> withPackageVersion "0.1.0"
         |> withPackage "bounds"
         |> withInitialVersion "0.2.0"
+
     let broadcastChannel =
         Repo.``Partas.Solid.Primitives.BroadcastChannel``.``.``
         |> makeProject "BroadcastChannel"
         |> withPackageVersion "0.1.0"
         |> withPackage "broadcast-channel"
         |> withInitialVersion "0.2.0"
+
     let clipboard =
         Repo.``Partas.Solid.Primitives.Clipboard``.``.``
         |> makeProject "Clipboard"
         |> withPackage "clipboard"
         |> withPackageVersion "0.1.0"
         |> withInitialVersion "0.2.0"
+
     let devices =
         Repo.``Partas.Solid.Primitives.Devices``.``.``
         |> makeProject "Devices"
         |> withPackage "devices"
         |> withPackageVersion "1.3.1"
         |> withInitialVersion "0.1.0"
+
     let eventBus =
         Repo.``Partas.Solid.Primitives.EventBus``.``.``
         |> makeProject "EventBus"
         |> withPackage "event-bus"
         |> withPackageVersion "0.1.0"
         |> withInitialVersion "0.2.0"
+
     let eventListener =
         Repo.``Partas.Solid.Primitives.EventListener``.``.``
         |> makeProject "EventListener"
         |> withPackage "event-listener"
         |> withPackageVersion "2.4.1"
         |> withInitialVersion "0.1.0"
+
     let idle =
         Repo.``Partas.Solid.Primitives.Idle``.``.``
         |> makeProject "Idle"
         |> withPackageVersion "0.2.0"
         |> withPackage "idle"
         |> withInitialVersion "0.2.0"
+
     let keyboard =
         Repo.``Partas.Solid.Primitives.Keyboard``.``.``
         |> makeProject "Keyboard"
         |> withPackage "keyboard"
         |> withPackageVersion "0.1.0"
         |> withInitialVersion "0.2.0"
+
     let media =
         Repo.``Partas.Solid.Primitives.Media``.``.``
         |> makeProject "Media"
         |> withPackage "media"
         |> withPackageVersion "0.1.0"
         |> withInitialVersion "0.2.0"
+
     let mouse =
         Repo.``Partas.Solid.Primitives.Mouse``.``.``
         |> makeProject "Mouse"
         |> withPackage "mouse"
         |> withPackageVersion "2.1.2"
         |> withInitialVersion "0.2.0"
+
     let raf =
         Repo.``Partas.Solid.Primitives.Raf``.``.``
         |> makeProject "Raf"
         |> withPackage "raf"
         |> withPackageVersion "2.3.1"
         |> withInitialVersion "0.2.0"
+
     let scheduled =
         Repo.``Partas.Solid.Primitives.Scheduled``.``.``
         |> makeProject "Scheduled"
         |> withPackage "scheduled"
         |> withPackageVersion "1.5.0"
         |> withInitialVersion "0.2.0"
+
     let scroll =
         Repo.``Partas.Solid.Primitives.Scroll``.``.``
         |> makeProject "Scroll"
         |> withPackage "scroll"
         |> withPackageVersion "2.1.0"
         |> withInitialVersion "0.2.0"
+
     let spring =
         Repo.``Partas.Solid.Primitives.Spring``.``.``
         |> makeProject "Spring"
         |> withPackage "spring"
         |> withPackageVersion "0.1.1"
         |> withInitialVersion "0.2.0"
+
     let timer =
         Repo.``Partas.Solid.Primitives.Timer``.``.``
         |> makeProject "Timer"
         |> withPackage "timer"
         |> withPackageVersion "1.4.0"
         |> withInitialVersion "0.2.0"
+
     let trigger =
         Repo.``Partas.Solid.Primitives.Trigger``.``.``
         |> makeProject "Trigger"
         |> withPackage "trigger"
         |> withPackageVersion "0.1.0"
         |> withInitialVersion "0.2.0"
+
     let tween =
         Repo.``Partas.Solid.Primitives.Tween``.``.``
         |> makeProject "Tween"
         |> withPackage "tween"
         |> withPackageVersion "1.4.0"
         |> withInitialVersion "0.2.0"
-        
-let projectPrimitivesDirectory = Repo.``Partas.Solid.Primitives``.``.``
-let projectTargetProjects = [
-    Projects.common
-    Projects.activeElement
-    Projects.audio
-    Projects.autoFocus
-    Projects.bounds
-    Projects.broadcastChannel
-    Projects.clipboard
-    Projects.devices
-    Projects.eventBus
-    Projects.eventListener
-    Projects.idle
-    Projects.keyboard
-    Projects.media
-    Projects.mouse
-    Projects.raf
-    Projects.scheduled
-    Projects.scroll
-    Projects.spring
-    Projects.timer
-    Projects.trigger
-    Projects.tween
-]        
 
-System.Environment.GetCommandLineArgs ()
+let projectPrimitivesDirectory = Repo.``Partas.Solid.Primitives``.``.``
+
+let projectTargetProjects =
+    [ Projects.common
+      Projects.activeElement
+      Projects.audio
+      Projects.autoFocus
+      Projects.bounds
+      Projects.broadcastChannel
+      Projects.clipboard
+      Projects.devices
+      Projects.eventBus
+      Projects.eventListener
+      Projects.idle
+      Projects.keyboard
+      Projects.media
+      Projects.mouse
+      Projects.raf
+      Projects.scheduled
+      Projects.scroll
+      Projects.spring
+      Projects.timer
+      Projects.trigger
+      Projects.tween ]
+
+System.Environment.GetCommandLineArgs()
 |> Array.skip 2
 |> Array.toList
 |> Fake.Core.Context.FakeExecutionContext.Create false __SOURCE_FILE__
@@ -230,10 +266,10 @@ open Fake.Tools.GitCliff
 module Ops =
     [<Literal>]
     let Clean = "Clean"
-    
+
     [<Literal>]
     let Prelude = "Prelude"
-    
+
     [<Literal>]
     let RestoreTools = "RestoreTools"
 
@@ -273,31 +309,25 @@ let description =
 let gitOwner = "shayanhabibi"
 let gitName = "Partas.Solid"
 let release = lazy ReleaseNotes.load "docs/RELEASE_NOTES.md"
+
 let releases =
     lazy
-    projectTargetProjects
-    |> List.map (fun project ->
-            project.Name, $"{project.Name}/RELEASE_NOTES.md"
-        )
-    |> List.append [ PackageName.create "MAIN","docs/RELEASE_NOTES.md" ]
-    |> List.map (fun keyVal -> fst keyVal, snd keyVal |> ReleaseNotes.load)
-    |> dict
-    
+        projectTargetProjects
+        |> List.map (fun project -> project.Name, $"{project.Name}/RELEASE_NOTES.md")
+        |> List.append [ PackageName.create "MAIN", "docs/RELEASE_NOTES.md" ]
+        |> List.map (fun keyVal -> fst keyVal, snd keyVal |> ReleaseNotes.load)
+        |> dict
+
 
 let apiKey =
     Target.getArguments ()
     |> Option.bind (fun args ->
-        let idx =
-            args
-            |> (Array.tryFindIndex ((=) "--nuget-api-key")
-                >> Option.map ((+) 1))
+        let idx = args |> (Array.tryFindIndex ((=) "--nuget-api-key") >> Option.map ((+) 1))
 
-        idx
-        |> Option.map (Array.get args))
+        idx |> Option.map (Array.get args))
 
 let sourceFiles =
-    !!"**/*.fs"
-    ++ "**/*.fsx"
+    !!"**/*.fs" ++ "**/*.fsx"
     -- "packages/**/*.*"
     -- "paket-files/**/*.*"
     -- ".fake/**/*.*"
@@ -308,28 +338,24 @@ let sourceFiles =
 
 // Check each project directory has a changelog config et al
 Target.create Ops.Prelude (fun _ ->
-    [
-        "config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\""
-        "config --local user.name \"GitHub Action\""
-    ]
+    [ "config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\""
+      "config --local user.name \"GitHub Action\"" ]
     |> List.iter (Git.CommandHelper.directRunGitCommandAndFail Repo.``.``)
+
     projectTargetProjects
     |> List.map (fun project ->
         let path = Path.combine project.Path "cliff.toml"
         let releaseNotes = Path.combine project.Path "RELEASE_NOTES.md"
+
         if (Path.Exists path && Path.Exists releaseNotes) |> not then
-            ConfigHelper.writeConfiguration
-                (fun _ -> createConfig project.Name project.InitialVersion)
-                path
-            project.Path
-            |> run (fun p -> { p with Bump = Some BumpStrategy.Auto })
+            ConfigHelper.writeConfiguration (fun _ -> createConfig project.Name project.InitialVersion) path
+            project.Path |> run (fun p -> { p with Bump = Some BumpStrategy.Auto })
             Git.Staging.stageAll project.Path
+
             Git.Branches.tag
                 project.Path
-                $"""{project.InitialVersion |> Option.defaultValue "0.1.0" }-{project.Name}"""
-    )
-    |> ignore
-    )
+                $"""{project.InitialVersion |> Option.defaultValue "0.1.0"}-{project.Name}""")
+    |> ignore)
 
 Target.create Ops.Format (fun _ ->
     let result =
@@ -366,31 +392,32 @@ Target.create Ops.CheckFormat (fun _ ->
 
 Target.create Ops.GitCliff (fun _ ->
     projectTargetProjects
-    |> List.iter (
-        function
-        {
-            Path = path; Name = packageName; InitialVersion = initVers
-        } ->
-            bumpWithModifiedContext packageName initVers path
-        )    
-    Git.Commit.execExtended __SOURCE_DIRECTORY__ "[skip ci]" "Release notes"
-    )
+    |> List.iter (function
+        | { Path = path
+            Name = packageName
+            InitialVersion = initVers } -> bumpWithModifiedContext packageName initVers path)
+
+    Git.Commit.execExtended __SOURCE_DIRECTORY__ "[skip ci]" "Release notes")
 // Generate assembly info file with versioning and up-to-date info
 Target.create Ops.AssemblyInfo (fun _ ->
     let projects = releases.Value
-    let paths = dict [
-        for (KeyValue(key, _)) in projects do
-            key,
-            if key = PackageName.create "MAIN" then "Common/AssemblyInfo.fs"
-            else "AssemblyInfo.fs"
-    ]
-    
+
+    let paths =
+        dict
+            [ for (KeyValue(key, _)) in projects do
+                  key,
+                  if key = PackageName.create "MAIN" then
+                      "Common/AssemblyInfo.fs"
+                  else
+                      "AssemblyInfo.fs" ]
+
     AssemblyInfoFile.createFSharp
         paths[PackageName.create "MAIN"]
         [ AssemblyInfo.Title gitName
           AssemblyInfo.Product gitName
           AssemblyInfo.Version projects[PackageName.create "MAIN"].AssemblyVersion
           AssemblyInfo.FileVersion projects[PackageName.create "MAIN"].AssemblyVersion ]
+
     projectTargetProjects
     |> List.iter (fun project ->
         AssemblyInfoFile.createFSharp
@@ -398,14 +425,11 @@ Target.create Ops.AssemblyInfo (fun _ ->
             [ AssemblyInfo.Title project.Name.Value
               AssemblyInfo.Product project.Name.Value
               AssemblyInfo.Version projects[project.Name].AssemblyVersion
-              AssemblyInfo.FileVersion projects[project.Name].AssemblyVersion ]
-        )
-    )
-    
+              AssemblyInfo.FileVersion projects[project.Name].AssemblyVersion ]))
+
 
 Target.create Ops.Clean (fun _ ->
-    !!"**/**/bin"
-    |> Shell.cleanDirs
+    !!"**/**/bin" |> Shell.cleanDirs
 
     Shell.cleanDirs [ "bin"; "temp" ])
 
@@ -420,10 +444,10 @@ open FSharp.Core
 open FSharp.Collections
 
 Target.create Ops.Build (fun _ ->
-    
+
     projectTargetProjects
     |> List.toArray
-    |> Array.Parallel.iter ( fun project ->
+    |> Array.Parallel.iter (fun project ->
         Path.combine project.Path (project.Name.Value + ".fsproj")
         |> DotNet.build (fun p ->
             { p with
@@ -433,31 +457,27 @@ Target.create Ops.Build (fun _ ->
                     [ "PackageVersion", releases.Value.[project.Name].AssemblyVersion
                       "Version", releases.Value.[project.Name].AssemblyVersion
                       if project.NpmPackage.IsSome && project.NpmPackageVersion.IsSome then
-                          createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] }))
-    )
-    
+                          createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] })))
+
 
 Target.create Ops.Test (fun _ ->
     !!"**/bin/**/*.Tests.Plugin.dll"
     |> Testing.Expecto.run (fun p ->
         { p with
             Summary = true
-            CustomArgs =
-                [ "--colours 256" ]
-                @ p.CustomArgs }))
+            CustomArgs = [ "--colours 256" ] @ p.CustomArgs }))
 
 Target.create Ops.RestoreTools (fun _ ->
     let result = DotNet.exec id "tool" "restore"
 
-    result.Messages
-    |> Trace.logItems "Tool Restore"
+    result.Messages |> Trace.logItems "Tool Restore"
 
     if not result.OK then
         failwith "Failed to restore dotnet tools")
 
 Target.create Ops.Nuget (fun _ ->
     projectTargetProjects
-    |> List.iter ( fun project ->
+    |> List.iter (fun project ->
         project.Path + project.Name.Value + ".fsproj"
         |> DotNet.pack (fun p ->
             { p with
@@ -468,8 +488,7 @@ Target.create Ops.Nuget (fun _ ->
                     [ "PackageVersion", release.Value.AssemblyVersion
                       "Version", release.Value.AssemblyVersion
                       if project.NpmPackage.IsSome && project.NpmPackageVersion.IsSome then
-                          createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] })
-    ))
+                          createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] })))
 
 Target.create Ops.Publish (fun _ ->
     !!"bin/*.nupkg"
@@ -490,37 +509,22 @@ Target.create Ops.PublishLocal (fun _ ->
                 DotNet.NuGetPushOptions.PushParams.PushTrials = 1 })
     ))
 
-Target.create Ops.ReleaseNotes (fun _ ->
-    Git.Branches.push "."
-    )
+Target.create Ops.ReleaseNotes (fun _ -> Git.Branches.push ".")
 
-Ops.Prelude
-==> Ops.GitCliff
-==> Ops.AssemblyInfo
-?=> Ops.Build
+Ops.Prelude ==> Ops.GitCliff ==> Ops.AssemblyInfo ?=> Ops.Build
 
-Ops.AssemblyInfo
-==> Ops.Nuget
+Ops.AssemblyInfo ==> Ops.Nuget
 
-Ops.Test
-==> Ops.Nuget
-==> Ops.Publish
+Ops.Test ==> Ops.Nuget ==> Ops.Publish
 
-Ops.GitCliff
-==> Ops.ReleaseNotes
+Ops.GitCliff ==> Ops.ReleaseNotes
 
-Ops.Test
-==> Ops.Nuget
-==> Ops.PublishLocal
+Ops.Test ==> Ops.Nuget ==> Ops.PublishLocal
 
-Ops.Clean
-==> Ops.Build
-==> Ops.Test
+Ops.Clean ==> Ops.Build ==> Ops.Test
 
-Ops.RestoreTools
-==> Ops.Test
+Ops.RestoreTools ==> Ops.Test
 
-Ops.CheckFormat
-==> Ops.Build
+Ops.CheckFormat ==> Ops.Build
 
 Target.runOrDefaultWithArguments Ops.Clean

@@ -7,14 +7,17 @@ open Browser.Types
 
 [<Fable.Core.Erase>]
 module Spec =
-    let [<Literal>] path = "@solid-primitives/broadcast-channel"
-    let [<Literal>] version = "0.1.0"
+    [<Literal>]
+    let path = "@solid-primitives/broadcast-channel"
+
+    [<Literal>]
+    let version = "0.1.0"
 
 [<AllowNullLiteral; Interface>]
 type MessageEvent<'T> =
     inherit MessageEvent
     abstract member data: 'T with get
-    
+
 
 [<AllowNullLiteral; Interface>]
 type BroadcastChannelResult = interface end
@@ -33,6 +36,7 @@ type MakeBroadcastChannelResult<'T> =
     abstract member channelName: string with get
     /// The underlying BroadcastChannel instance
     abstract member instance: BroadcastChannel<'T> with get
+
 [<AllowNullLiteral; Interface>]
 type CreateBroadcastChannelResult<'T> =
     inherit BroadcastChannelResult
@@ -60,7 +64,8 @@ type BroadcastChannel<'T> =
     /// <returns>An object with the following properties<br/>
     /// onMessage, postMessage, close, channelName, instance</returns>
     [<ImportMember("@solid-primitives/broadcast-channel")>]
-    static member makeBroadcastChannel<'T> (name: string): MakeBroadcastChannelResult<'T> = jsNative
+    static member makeBroadcastChannel<'T>(name: string) : MakeBroadcastChannelResult<'T> = jsNative
+
     /// <summary>
     /// Provides the same functionality as <c>makeBroadcastChannel</c> but instead of returning <c>onMessage</c>, it
     /// returns a <c>message</c> signal accessor that updates when postMessage is fired from other contexts.
@@ -69,4 +74,4 @@ type BroadcastChannel<'T> =
     /// <returns>An object with the following properties<br/>
     /// message, postMessage, close, channelName, instance</returns>
     [<ImportMember("@solid-primitives/broadcast-channel")>]
-    static member createBroadcastChannel<'T> (name: string): CreateBroadcastChannelResult<'T> = jsNative
+    static member createBroadcastChannel<'T>(name: string) : CreateBroadcastChannelResult<'T> = jsNative

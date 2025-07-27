@@ -7,8 +7,11 @@ open Fable.Core
 module private ActiveElementSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/active-element"
-        let [<Literal>] version = ""
+        [<Literal>]
+        let path = "@solid-primitives/active-element"
+
+        [<Literal>]
+        let version = ""
 
 open ActiveElementSpec
 
@@ -21,8 +24,8 @@ type ActiveElement =
     /// non reactive
     /// </remarks>
     [<ImportMember(Spec.path)>]
-    static member makeActiveElementListener (handler: #HtmlElement -> unit): DisposeCallback = jsNative
-    
+    static member makeActiveElementListener(handler: #HtmlElement -> unit) : DisposeCallback = jsNative
+
     /// <summary>
     /// Attaches "blur" and "focus" event listeners to the element
     /// </summary>
@@ -30,28 +33,29 @@ type ActiveElement =
     /// <param name="callBack"></param>
     /// <param name="useCapture"></param>
     [<ImportMember(Spec.path)>]
-    static member makeFocusListener (target: #HtmlElement, callBack: bool -> unit, ?useCapture: bool): DisposeCallback = jsNative
-    
+    static member makeFocusListener(target: #HtmlElement, callBack: bool -> unit, ?useCapture: bool) : DisposeCallback =
+        jsNative
+
     /// <summary>
     /// Provides a reactive signal of <c>document.activeElement</c>. Check which element is currently focused.
     /// </summary>
     [<ImportMember(Spec.path)>]
-    static member createActiveElement (): Accessor<#HtmlElement> = jsNative
-    
+    static member createActiveElement() : Accessor<#HtmlElement> = jsNative
+
     /// <summary>
     /// Provides a signal representing element's focus state
     /// </summary>
     [<ImportMember(Spec.path)>]
-    static member createFocusSignal(target: #HtmlElement): Accessor<bool> = jsNative
-    
+    static member createFocusSignal(target: #HtmlElement) : Accessor<bool> = jsNative
+
     /// <summary>
     /// Provides a signal representing element's focus state
     /// </summary>
     [<ImportMember(Spec.path)>]
-    static member createFocusSignal(target: Accessor<#HtmlElement>): Accessor<bool> = jsNative
-    
-    // /// <summary>
-    // /// A directive that notifies you when the element becomes active or inactive
-    // /// </summary>
-    // [<ImportMember(Spec.path)>]
-    // static member focus: string = jsNative
+    static member createFocusSignal(target: Accessor<#HtmlElement>) : Accessor<bool> = jsNative
+
+// /// <summary>
+// /// A directive that notifies you when the element becomes active or inactive
+// /// </summary>
+// [<ImportMember(Spec.path)>]
+// static member focus: string = jsNative

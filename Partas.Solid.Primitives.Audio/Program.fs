@@ -8,12 +8,15 @@ open Browser.Types
 module private AudioSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/audio"
+        [<Literal>]
+        let path = "@solid-primitives/audio"
 
 [<Global>]
 type MediaSource = interface end
+
 [<Erase>]
 type AudioSource = U3<string, HTMLAudioElement, MediaSource>
+
 [<RequireQualifiedAccess; StringEnum>]
 type AudioState =
     | Loading
@@ -23,6 +26,7 @@ type AudioState =
     | Stopped
     | Ready
     | Error
+
 [<AllowNullLiteral; Interface>]
 type AudioControls =
     /// Start playing
@@ -58,7 +62,8 @@ type Audio =
     /// <param name="src">Audio file path or MediaSource to be played</param>
     /// <param name="handlers">An array of handlers to bind against the player.</param>
     [<ImportMember(Spec.path)>]
-    static member makeAudio(src: AudioSource, ?handlers: (*AudioEventHandlers*) obj): HTMLAudioElement = jsNative
+    static member makeAudio(src: AudioSource, ?handlers (*AudioEventHandlers*) : obj) : HTMLAudioElement = jsNative
+
     /// <summary>
     /// Provides a very basic interface for wrapping listeners to a supplied or default
     /// audio player.
@@ -69,7 +74,8 @@ type Audio =
     /// <param name="src"></param>
     /// <param name="handlers">Array of handlers to bind against the player</param>
     [<ImportMember(Spec.path)>]
-    static member makeAudioPlayer(src: AudioSource, ?handlers: (*AudioEventHandlers*) obj): AudioPlayer = jsNative
+    static member makeAudioPlayer(src: AudioSource, ?handlers (*AudioEventHandlers*) : obj) : AudioPlayer = jsNative
+
     /// <summary>
     /// Creates a very basic audio/sound player with reactive properties to control
     /// the audio. Be careful not to destructure the value properties provided
@@ -86,11 +92,11 @@ type Audio =
     /// <param name="playing"></param>
     /// <param name="volume"></param>
     [<ImportMember(Spec.path)>]
-    static member createAudio(
-            src: AudioSource,
-            ?playing: Accessor<bool>,
-            ?volume: Accessor<float>
-        ): ReactiveAudioPlayer * AudioControls = jsNative
+    static member createAudio
+        (src: AudioSource, ?playing: Accessor<bool>, ?volume: Accessor<float>)
+        : ReactiveAudioPlayer * AudioControls =
+        jsNative
+
     /// <summary>
     /// Creates a very basic audio/sound player with reactive properties to control
     /// the audio. Be careful not to destructure the value properties provided
@@ -107,8 +113,7 @@ type Audio =
     /// <param name="playing"></param>
     /// <param name="volume"></param>
     [<ImportMember(Spec.path)>]
-    static member createAudio(
-            src: Accessor<AudioSource>,
-            ?playing: Accessor<bool>,
-            ?volume: Accessor<float>
-        ): ReactiveAudioPlayer * AudioControls = jsNative
+    static member createAudio
+        (src: Accessor<AudioSource>, ?playing: Accessor<bool>, ?volume: Accessor<float>)
+        : ReactiveAudioPlayer * AudioControls =
+        jsNative

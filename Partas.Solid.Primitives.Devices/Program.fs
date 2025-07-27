@@ -8,13 +8,14 @@ open Browser.Types
 module private DevicesSpec =
     [<Erase>]
     module Spec =
-        let [<Literal>] path = "@solid-primitives/devices"
+        [<Literal>]
+        let path = "@solid-primitives/devices"
 
 [<AllowNullLiteral; Interface>]
 type GyroscopeValue =
-    abstract member alpha: float with get,set
-    abstract member beta: float with get,set
-    abstract member gamma: float with get,set
+    abstract member alpha: float with get, set
+    abstract member beta: float with get, set
+    abstract member gamma: float with get, set
 
 [<Erase; AutoOpen>]
 type Devices =
@@ -29,7 +30,8 @@ type Devices =
     /// If the array does not contain a device of a certain kind, you cannot get permissions, as requesting permissions requires requesting a stream on any device of the kind.
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member createDevices(): Accessor<MediaDeviceInfo[]> = jsNative
+    static member createDevices() : Accessor<MediaDeviceInfo[]> = jsNative
+
     /// <summary>
     /// Creates a list of all media devices that are microphones
     /// </summary>
@@ -41,7 +43,8 @@ type Devices =
     /// Without a device, you cannot get permissions, as requesting permissions requires requesting a stream on any device of the kind.
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member createMicrophones(): Accessor<MediaDeviceInfo[]> = jsNative
+    static member createMicrophones() : Accessor<MediaDeviceInfo[]> = jsNative
+
     /// <summary>
     /// Creates a list of all media devices that are speakers
     /// </summary>
@@ -53,7 +56,8 @@ type Devices =
     /// Microphone permissions automatically include speaker permissions. You can use the device id of the speaker to use the setSinkId-API of any audio tag.
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member createSpeakers(): Accessor<MediaDeviceInfo[]> = jsNative
+    static member createSpeakers() : Accessor<MediaDeviceInfo[]> = jsNative
+
     /// <summary>
     /// Creates a list of all media devices that are cameras
     /// </summary>
@@ -65,8 +69,8 @@ type Devices =
     /// Without a device, you cannot get permissions, as requesting permissions requires requesting a stream on any device of the kind.
     /// </returns>
     [<ImportMember(Spec.path)>]
-    static member createCameras(): Accessor<MediaDeviceInfo> = jsNative
-    
+    static member createCameras() : Accessor<MediaDeviceInfo> = jsNative
+
     /// <summary>
     /// Creates a reactive wrapper to get device acceleration
     /// </summary>
@@ -77,8 +81,9 @@ type Devices =
     /// number as ms. default value 100
     /// </param>
     [<ImportMember(Spec.path)>]
-    static member createAccelerometer(?includeGravity: bool, ?interval: float): Accessor<DeviceAcceleration option> = jsNative
-    
+    static member createAccelerometer(?includeGravity: bool, ?interval: float) : Accessor<DeviceAcceleration option> =
+        jsNative
+
     /// <summary>
     /// Creates a reactive wrapper to get device orientation
     /// </summary>
@@ -86,4 +91,4 @@ type Devices =
     /// number as ms. default value 100
     /// </param>
     [<ImportMember(Spec.path)>]
-    static member createGyroscope(?interval: float): Accessor<GyroscopeValue> = jsNative
+    static member createGyroscope(?interval: float) : Accessor<GyroscopeValue> = jsNative
