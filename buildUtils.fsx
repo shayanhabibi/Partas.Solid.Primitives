@@ -35,45 +35,46 @@ module GitCliff =
 
     let createConfig packageName (initialVersion: string option) : Config =
         { Config.Default with
+            Git.CommitParsers = Config.Default.Git.CommitParsers |> Array.append [|
+                CommitParser.Create(message = "^\[skip ci\]", skip = true)
+            |]
             Bump.InitialTag = initialVersion |> Option.defaultValue "0.1.0"
-            Changelog.Body =
-                $$$"""{%- macro remote_url() -%}
-    https://github.com/{{ remote.github.owner }}/{{ remote.github.repo }}
-{%- endmacro -%}
+            Changelog.Body = $"{{%%- macro remote_url() -%%}}
+    https://github.com/{{{{ remote.github.owner }}}}/{{{{ remote.github.repo }}}}
+{{%%- endmacro -%%}}
 
-{% if version -%}
-    ## [{{ version | trim_start_matches(pat="v") | {{{PackageName.configVersionTrimmer packageName}}} }}] - {{ timestamp | date(format="%Y-%m-%d") }}
-{% else -%}
+{{%% if version -%%}}
+    ## [{{{{ version | trim_start_matches(pat=\"v\") | {PackageName.configVersionTrimmer packageName} }}}}] - {{ timestamp | date(format=\"%%Y-%%m-%%d\") }}
+{{%% else -%%}}
     <h2>
 
         [Unreleased]
     
     </h2>
-{% endif -%}
+{{%% endif -%%}}
 
-{% for group, commits in commits | group_by(attribute="group") %}
-    <h3>{{ group | upper_first }}</h3>
-    {%- for commit in commits %}
-        - {{ commit.message | split(pat="\n") | first | upper_first | trim }}\
-            {% if commit.remote.username %} by @{{ commit.remote.username }}{%- endif -%}
-            {% if commit.remote.pr_number %} in \
-            [#{{ commit.remote.pr_number }}]({{ self::remote_url() }}/pull/{{ commit.remote.pr_number }}) \
-            {%- endif -%}
-    {% endfor %}
-{% endfor %}
+{{%% for group, commits in commits | group_by(attribute=\"group\") %%}}
+    <h3>{{{{ group | upper_first }}}}</h3>
+    {{%%- for commit in commits %%}}
+        - {{{{ commit.message | split(pat=\"\n\") | first | upper_first | trim }}}} \
+            {{%% if commit.remote.username %%}} by @{{{{ commit.remote.username }}}}{{%%- endif -%%}}
+            {{%% if commit.remote.pr_number %%}} in \
+            [#{{{{ commit.remote.pr_number }}}}]({{{{ self::remote_url() }}}}/pull/{{{{ commit.remote.pr_number }}}}) \
+            {{%%- endif -%%}}
+    {{%% endfor %%}}
+{{%% endfor %%}}
 
-{%- if github.contributors | filter(attribute="is_first_time", value=true) | length != 0 %}
+{{%%- if github.contributors | filter(attribute=\"is_first_time\", value=true) | length != 0 %%}}
   <h2>New Contributors</h2>
-{%- endif -%}
+{{%%- endif -%%}}
 
-{% for contributor in github.contributors | filter(attribute="is_first_time", value=true) %}
-  * @{{ contributor.username }} made their first contribution
-    {%- if contributor.pr_number %} in \
-      [#{{ contributor.pr_number }}]({{ self::remote_url() }}/pull/{{ contributor.pr_number }}) \
-    {%- endif %}
-{%- endfor %}\n
-
-"""
+{{%% for contributor in github.contributors | filter(attribute=\"is_first_time\", value=true) %%}}
+  * @{{{{ contributor.username }}}} made their first contribution
+    {{%%- if contributor.pr_number %%}} in \
+      [#{{{{ contributor.pr_number }}}}]({{{{ self::remote_url() }}}}/pull/{{{{ contributor.pr_number }}}}) \
+    {{%%- endif %%}}
+{{%%- endfor %%}}
+"
             Changelog.Output = Files.``RELEASE_NOTES.md`` }
 
     open GitCliffContext
@@ -175,7 +176,9 @@ module GitCliff =
         | Some v1, Some v2 when v1 <> v2 -> newVersion
         | _ -> None
         |> function
-            | Some value -> value + PackageName.toTagSuffix packageName |> Git.Branches.tag ""
+            | Some value ->
+                let tag = value + PackageName.toTagSuffix packageName
+                tag |> Git.Branches.tag ""
             | _ -> ()
 
 

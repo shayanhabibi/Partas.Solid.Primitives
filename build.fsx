@@ -489,6 +489,7 @@ Target.create Ops.Nuget (fun _ ->
                       if project.NpmPackage.IsSome && project.NpmPackageVersion.IsSome then
                           createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] }))
     Git.Branches.push Repo.``.``
+    Git.CommandHelper.directRunGitCommandAndFail "" "push --tags origin"
     )
 
 Target.create Ops.Publish (fun _ ->
