@@ -7,14 +7,9 @@ open Fake.Tools
 open EasyBuild.FileSystemProvider
 
 type Files =
-    VirtualFileSystem<
-        ".",
-        """
-cliff.toml
-RELEASE_NOTES.md
-gitcliff-context.json
-"""
-     >
+    static member ``cliff.toml`` = "cliff.toml"
+    static member ``RELEASE_NOTES.md`` = "RELEASE_NOTES.md"
+    static member ``gitcliff-context.json`` = "gitcliff-context.json"
 
 type PackageName =
     private
