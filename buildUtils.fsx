@@ -171,11 +171,11 @@ module GitCliff =
         | Some v1, Some v2 when v1 <> v2 -> newVersion
         | _ -> None
         |> function
-            | Some value -> value + PackageName.toTagSuffix packageName |> Git.Branches.tag dir
+            | Some value -> value + PackageName.toTagSuffix packageName |> Git.Branches.tag ""
             | _ -> ()
 
         [ Files.``cliff.toml``; Files.``RELEASE_NOTES.md`` ]
-        |> List.iter (Git.Staging.stageFile dir >> ignore)
+        |> List.iter (Git.Staging.stageFile "" >> ignore)
 
 
 

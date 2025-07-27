@@ -341,21 +341,7 @@ Target.create Ops.Prelude (fun _ ->
     [ "config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\""
       "config --local user.name \"GitHub Action\"" ]
     |> List.iter (Git.CommandHelper.directRunGitCommandAndFail Repo.``.``)
-
-    projectTargetProjects
-    |> List.map (fun project ->
-        let path = Path.combine project.Path "cliff.toml"
-        let releaseNotes = Path.combine project.Path "RELEASE_NOTES.md"
-
-        if (Path.Exists path && Path.Exists releaseNotes) |> not then
-            ConfigHelper.writeConfiguration (fun _ -> createConfig project.Name project.InitialVersion) path
-            project.Path |> run (fun p -> { p with Bump = Some BumpStrategy.Auto })
-            Git.Staging.stageAll project.Path
-
-            Git.Branches.tag
-                project.Path
-                $"""{project.InitialVersion |> Option.defaultValue "0.1.0"}-{project.Name}""")
-    |> ignore)
+)
 
 Target.create Ops.Format (fun _ ->
     let result =
@@ -509,7 +495,7 @@ Target.create Ops.PublishLocal (fun _ ->
                 DotNet.NuGetPushOptions.PushParams.PushTrials = 1 })
     ))
 
-Target.create Ops.ReleaseNotes (fun _ -> Git.Branches.push ".")
+Target.create Ops.ReleaseNotes (fun _ -> Git.Branches.push Repo.``.``)
 
 Ops.Prelude ==> Ops.GitCliff ==> Ops.AssemblyInfo ?=> Ops.Build
 
