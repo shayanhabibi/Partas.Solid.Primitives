@@ -36,6 +36,7 @@ module GitCliff =
             Git.CommitParsers = Config.Default.Git.CommitParsers |> Array.append [|
                 CommitParser.Create(message = "^\[skip ci\]", skip = true)
             |]
+            Changelog.RenderAlways = Some true
             Bump.InitialTag = initialVersion |> Option.defaultValue "0.1.0"
             Changelog.Body = $"{{%%- macro remote_url() -%%}}
     https://github.com/{{{{ remote.github.owner }}}}/{{{{ remote.github.repo }}}}
