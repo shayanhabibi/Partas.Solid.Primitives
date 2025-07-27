@@ -108,6 +108,7 @@ module GitCliff =
         GitCliff.run
             (fun p ->
                 { p with
+                    WorkDir = dir
                     Output = Files.``gitcliff-context.json``
                     Flags = [ GitCliff.CliFlags.Context ]
                     Config = Files.``cliff.toml``
@@ -117,6 +118,7 @@ module GitCliff =
         validateContext packageName dir,
         fun ctx ->
             { ctx with
+                GitCliff.CliParams.WorkDir = dir
                 GitCliff.CliParams.FromContext = Files.``gitcliff-context.json`` }
 
 
