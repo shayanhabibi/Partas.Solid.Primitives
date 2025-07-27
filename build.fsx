@@ -436,7 +436,7 @@ Target.create Ops.Build (fun _ ->
     projectTargetProjects
     |> List.iter (fun project ->
         (
-        if project.Path = ""
+        if project.Name = Projects.projectPrimitives.Name
         then Path.combine project.Path project.Name.Value
         else project.Path
         , project.Name.Value + ".fsproj"
@@ -472,7 +472,7 @@ Target.create Ops.Nuget (fun _ ->
     projectTargetProjects
     |> List.iter (fun project ->
         (
-        if project.Path = ""
+        if project.Name = Projects.projectPrimitives.Name
         then Path.combine project.Path project.Name.Value
         else project.Path
         , project.Name.Value + ".fsproj"
