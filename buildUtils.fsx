@@ -98,15 +98,15 @@ module GitCliff =
         context |> List.map modifyContext: JsonContent,
         lastVersion
 
-    let private validateContext packageName =
-        File.readAsString Files.``gitcliff-context.json``
+    let private validateContext packageName dir =
+        Path.combine dir Files.``gitcliff-context.json``
+        |> File.readAsString
         |> Json.deserialize
         |> trimVersions packageName
         |> fun (content, lastVersion) ->
             content
             |> Json.serialize
-            |> File.writeString false Files.``gitcliff-context.json``
-
+            |> File.writeString false (Path.combine dir Files.``gitcliff-context.json``)
             lastVersion
 
     let private getModifiedContext packageName dir =
@@ -118,23 +118,26 @@ module GitCliff =
                     Config = Files.``cliff.toml`` })
             dir
 
-        validateContext packageName,
+        validateContext packageName dir,
         fun ctx ->
             { ctx with
                 GitCliff.CliParams.FromContext = Files.``gitcliff-context.json`` }
 
 
     let runWithModifiedContext cliParams packageName initialVersion dir =
-        if not <| File.exists Files.``cliff.toml`` then
-            writeConfiguration (fun _ -> createConfig packageName initialVersion) Files.``cliff.toml``
+        let cliffPath = Path.combine dir Files.``cliff.toml``
+        if not <| File.exists cliffPath then
+            writeConfiguration (fun _ -> createConfig packageName initialVersion) cliffPath 
 
         let _, cliModifier = getModifiedContext packageName dir
         GitCliff.run (cliParams >> cliModifier) dir
-        File.delete Files.``gitcliff-context.json``
+        File.delete cliffPath
 
     let bumpWithModifiedContext packageName initialVersion dir =
-        if not <| File.exists Files.``cliff.toml`` then
-            writeConfiguration (fun _ -> createConfig packageName initialVersion) Files.``cliff.toml``
+        let cliffPath = Path.combine dir Files.``cliff.toml``
+        if not <| File.exists cliffPath then
+            cliffPath
+            |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
 
         let previousVersion, cliModifier = getModifiedContext packageName dir
 
@@ -148,9 +151,9 @@ module GitCliff =
             >> cliModifier
 
         GitCliff.run bumpedContextCliParams dir
-
+        let contextPath = Path.combine dir Files.``gitcliff-context.json``
         let newVersion =
-            File.readAsString Files.``gitcliff-context.json``
+            File.readAsString contextPath
             |> Json.deserialize
             |> List.map _.Version
             |> List.tryFind _.IsSome
@@ -160,9 +163,9 @@ module GitCliff =
             cliModifier
             dir
 
-        File.delete Files.``gitcliff-context.json``
+        File.delete contextPath
 
-        let files = [ Files.``cliff.toml``; Files.``RELEASE_NOTES.md`` ]
+        let files = [ cliffPath; Path.combine dir Files.``RELEASE_NOTES.md`` ]
         files
         |> List.iter (Git.Staging.stageFile "" >> ignore)
         Git.Commit.exec "" $"[skip ci]\n\nchore: update release notes for {packageName.Value}"
