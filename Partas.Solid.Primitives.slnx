@@ -1,0 +1,37 @@
+<Solution>
+  <Folder Name="/.Scripts/">
+    <File Path="build.fsx" />
+    <File Path="buildUtils.fsx" />
+  </Folder>
+  <Folder Name="/Bindings/">
+    <Project Path="Partas.Solid.Primitives.ActiveElement/Partas.Solid.Primitives.ActiveElement.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Audio/Partas.Solid.Primitives.Audio.fsproj" />
+    <Project Path="Partas.Solid.Primitives.AutoFocus/Partas.Solid.Primitives.AutoFocus.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Bounds/Partas.Solid.Primitives.Bounds.fsproj" />
+    <Project Path="Partas.Solid.Primitives.BroadcastChannel/Partas.Solid.Primitives.BroadcastChannel.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Clipboard/Partas.Solid.Primitives.Clipboard.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Common/Partas.Solid.Primitives.Common.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Devices/Partas.Solid.Primitives.Devices.fsproj" />
+    <Project Path="Partas.Solid.Primitives.EventBus/Partas.Solid.Primitives.EventBus.fsproj" />
+    <Project Path="Partas.Solid.Primitives.EventListener/Partas.Solid.Primitives.EventListener.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Idle/Partas.Solid.Primitives.Idle.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Keyboard/Partas.Solid.Primitives.Keyboard.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Media/Partas.Solid.Primitives.Media.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Mouse/Partas.Solid.Primitives.Mouse.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Raf/Partas.Solid.Primitives.Raf.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Scheduled/Partas.Solid.Primitives.Scheduled.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Scroll/Partas.Solid.Primitives.Scroll.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Spring/Partas.Solid.Primitives.Spring.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Timer/Partas.Solid.Primitives.Timer.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Trigger/Partas.Solid.Primitives.Trigger.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Tween/Partas.Solid.Primitives.Tween.fsproj" />
+  </Folder>
+  <Folder Name="/Common/">
+    <Project Path="Partas.Solid.Primitives/Partas.Solid.Primitives.fsproj" />
+  </Folder>
+  <Folder Name="/DevBindings/" />
+  <Folder Name="/Misc/" />
+  <Folder Name="/Tests/">
+    <Project Path="Devgrounds/Devgrounds.fsproj" />
+  </Folder>
+</Solution>
