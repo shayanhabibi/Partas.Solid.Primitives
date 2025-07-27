@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/.github/">
+    <File Path=".github\ci.yml" />
+  </Folder>
   <Folder Name="/.Scripts/">
     <File Path="build.fsx" />
     <File Path="buildUtils.fsx" />
