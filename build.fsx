@@ -434,7 +434,13 @@ Target.create Ops.Build (fun _ ->
     projectTargetProjects
     |> List.toArray
     |> Array.Parallel.iter (fun project ->
-        Path.combine project.Path (project.Name.Value + ".fsproj")
+        (
+        if project.Path = ""
+        then Path.combine project.Path project.Name.Value
+        else project.Path
+        , project.Name.Value + ".fsproj"
+        )
+        ||> Path.combine
         |> DotNet.build (fun p ->
             { p with
                 Configuration = DotNet.BuildConfiguration.Release
@@ -464,7 +470,13 @@ Target.create Ops.RestoreTools (fun _ ->
 Target.create Ops.Nuget (fun _ ->
     projectTargetProjects
     |> List.iter (fun project ->
-        project.Path + project.Name.Value + ".fsproj"
+        (
+        if project.Path = ""
+        then Path.combine project.Path project.Name.Value
+        else project.Path
+        , project.Name.Value + ".fsproj"
+        )
+        ||> Path.combine
         |> DotNet.pack (fun p ->
             { p with
                 NoRestore = true
