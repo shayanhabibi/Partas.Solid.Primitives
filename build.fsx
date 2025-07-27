@@ -47,7 +47,11 @@ module Projects =
 
     let private makeProject name path =
         { Path = path
-          Name = baseName + "." + name |> PackageName.create
+          Name =
+              match name with
+              | "" -> baseName
+              | _ -> (baseName, name) ||> sprintf "%s.%s"
+              |> PackageName.create
           Description = "Bindings for Solid-Primitives " + name
           Tags = tags
           NpmPackageVersion = None
@@ -216,7 +220,10 @@ module Projects =
         |> withPackageVersion "1.4.0"
         |> withInitialVersion "0.2.0"
 
-let projectPrimitivesDirectory = Repo.``Partas.Solid.Primitives``.``.``
+    let projectPrimitives =
+        Repo.``.``
+        |> makeProject ""
+        |> withInitialVersion "0.3.0"
 
 let projectTargetProjects =
     [ Projects.common
@@ -239,7 +246,8 @@ let projectTargetProjects =
       Projects.spring
       Projects.timer
       Projects.trigger
-      Projects.tween ]
+      Projects.tween
+      Projects.projectPrimitives ]
 
 System.Environment.GetCommandLineArgs()
 |> Array.skip 2
@@ -312,8 +320,7 @@ let gitName = "Partas.Solid"
 let releases =
     lazy
         projectTargetProjects
-        |> List.map (fun project -> project.Name, $"{project.Name}/RELEASE_NOTES.md")
-        |> List.append [ PackageName.create "MAIN", "./RELEASE_NOTES.md" ]
+        |> List.map (fun project -> project.Name, $"{project.Path}/RELEASE_NOTES.md")
         |> List.map (fun keyVal -> fst keyVal, snd keyVal |> ReleaseNotes.load)
         |> dict
 
@@ -391,17 +398,11 @@ Target.create Ops.AssemblyInfo (fun _ ->
         dict
             [ for (KeyValue(key, _)) in projects do
                   key,
-                  if key = PackageName.create "MAIN" then
-                      "Common/AssemblyInfo.fs"
-                  else
+                  Path.combine
+                      (projectTargetProjects
+                       |> List.find (_.Name >> (=) key)
+                       |> _.Path)
                       "AssemblyInfo.fs" ]
-
-    AssemblyInfoFile.createFSharp
-        paths[PackageName.create "MAIN"]
-        [ AssemblyInfo.Title gitName
-          AssemblyInfo.Product gitName
-          AssemblyInfo.Version projects[PackageName.create "MAIN"].AssemblyVersion
-          AssemblyInfo.FileVersion projects[PackageName.create "MAIN"].AssemblyVersion ]
 
     projectTargetProjects
     |> List.iter (fun project ->

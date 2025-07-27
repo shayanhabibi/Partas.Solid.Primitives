@@ -1,8 +1,7 @@
 <Solution>
-  <Folder Name="/.github/" >
-      <File Path=".github/workflows/ci.yml"/>
+  <Folder Name="/.github/">
+    <File Path=".github/workflows/ci.yml" />
   </Folder>
-    
   <Folder Name="/.Scripts/">
     <File Path="build.fsx" />
     <File Path="buildUtils.fsx" />
@@ -14,7 +13,6 @@
     <Project Path="Partas.Solid.Primitives.Bounds/Partas.Solid.Primitives.Bounds.fsproj" />
     <Project Path="Partas.Solid.Primitives.BroadcastChannel/Partas.Solid.Primitives.BroadcastChannel.fsproj" />
     <Project Path="Partas.Solid.Primitives.Clipboard/Partas.Solid.Primitives.Clipboard.fsproj" />
-    <Project Path="Partas.Solid.Primitives.Common/Partas.Solid.Primitives.Common.fsproj" />
     <Project Path="Partas.Solid.Primitives.Devices/Partas.Solid.Primitives.Devices.fsproj" />
     <Project Path="Partas.Solid.Primitives.EventBus/Partas.Solid.Primitives.EventBus.fsproj" />
     <Project Path="Partas.Solid.Primitives.EventListener/Partas.Solid.Primitives.EventListener.fsproj" />
@@ -31,6 +29,7 @@
     <Project Path="Partas.Solid.Primitives.Tween/Partas.Solid.Primitives.Tween.fsproj" />
   </Folder>
   <Folder Name="/Common/">
+    <Project Path="Partas.Solid.Primitives.Common/Partas.Solid.Primitives.Common.fsproj" />
     <Project Path="Partas.Solid.Primitives/Partas.Solid.Primitives.fsproj" />
   </Folder>
   <Folder Name="/DevBindings/" />
