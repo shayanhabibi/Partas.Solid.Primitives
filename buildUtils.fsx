@@ -40,7 +40,6 @@ module GitCliff =
             Git.CommitParsers =
                 Config.Default.Git.CommitParsers
                 |> Array.append [| CommitParser.Create(message = "^\[skip ci\]", skip = true) |]
-            Git.IncludePaths = [| System.IO.Path.Combine(Repo.``.``, PackageName.get packageName) |]
             Changelog.RenderAlways = Some true
             Bump.InitialTag = initialVersion |> Option.defaultValue "0.1.0"
             Changelog.Body =
@@ -115,7 +114,7 @@ module GitCliff =
         GitCliff.run
             (fun p ->
                 { p with
-                    WorkDir = dir
+                    IncludePath = dir
                     Output = Files.``gitcliff-context.json``
                     Flags = [ GitCliff.CliFlags.Context ]
                     Config = Files.``cliff.toml``
@@ -125,7 +124,7 @@ module GitCliff =
         validateContext packageName dir,
         fun ctx ->
             { ctx with
-                GitCliff.CliParams.WorkDir = dir
+                GitCliff.CliParams.IncludePath = dir
                 GitCliff.CliParams.FromContext = Files.``gitcliff-context.json`` }
 
 
