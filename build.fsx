@@ -10,7 +10,7 @@
 #r "nuget: Fake.Tools.Git"
 #r "nuget: Fake.Api.GitHub"
 #r "nuget: Fake.DotNet.Testing.Expecto"
-#r "nuget: Partas.Fake.Tools.GitCliff, 0.2.3"
+#r "nuget: Partas.Fake.Tools.GitCliff"
 
 open System.Threading.Tasks
 open BuildUtils
@@ -48,10 +48,10 @@ module Projects =
     let private makeProject name path =
         { Path = path
           Name =
-              match name with
-              | "" -> baseName
-              | _ -> (baseName, name) ||> sprintf "%s.%s"
-              |> PackageName.create
+            match name with
+            | "" -> baseName
+            | _ -> (baseName, name) ||> sprintf "%s.%s"
+            |> PackageName.create
           Description = "Bindings for Solid-Primitives " + name
           Tags = tags
           NpmPackageVersion = None
@@ -220,10 +220,7 @@ module Projects =
         |> withPackageVersion "1.4.0"
         |> withInitialVersion "0.2.0"
 
-    let projectPrimitives =
-        Repo.``.``
-        |> makeProject ""
-        |> withInitialVersion "0.3.0"
+    let projectPrimitives = Repo.``.`` |> makeProject "" |> withInitialVersion "0.3.0"
 
 let projectTargetProjects =
     [ Projects.common
@@ -340,17 +337,15 @@ let sourceFiles =
     -- "**/obj/**/*.*"
     -- "**/AssemblyInfo.fs"
     -- "**/IndexAccess/IndexAccess.fs"
-    -- "Partas.Solid.FablePlugin/Plugin.fs"
 
 // Check each project directory has a changelog config et al
 Target.create Ops.Prelude (fun args ->
-    if args.Context.Arguments |> List.contains "--local"
-    then ()
+    if args.Context.Arguments |> List.contains "--local" then
+        ()
     else
-    [ "config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\""
-      "config --local user.name \"GitHub Action\"" ]
-    |> List.iter (Git.CommandHelper.directRunGitCommandAndFail Repo.``.``)
-)
+        [ "config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\""
+          "config --local user.name \"GitHub Action\"" ]
+        |> List.iter (Git.CommandHelper.directRunGitCommandAndFail Repo.``.``))
 
 Target.create Ops.Format (fun _ ->
     let result =
@@ -397,24 +392,22 @@ Target.create Ops.GitCliff (fun _ ->
 Target.create Ops.AssemblyInfo (fun _ ->
     let projects =
         try
-        releases.Value
+            releases.Value
         with e ->
-            !! "*/RELEASE_NOTES.md"
-            |> Seq.iter (File.readAsString >> Trace.log)
-            reraise()
-            
+            !!"*/RELEASE_NOTES.md" |> Seq.iter (File.readAsString >> Trace.log)
+            reraise ()
+
 
     let paths =
         dict
             [ for (KeyValue(key, _)) in projects do
                   key,
                   Path.combine
-                      (projectTargetProjects
-                       |> List.find (_.Name >> (=) key)
-                       |> _.Path)
-                      (if key = Projects.projectPrimitives.Name
-                       then Path.combine Projects.projectPrimitives.Name.Value "AssemblyInfo.fs"
-                       else "AssemblyInfo.fs") ]
+                      (projectTargetProjects |> List.find (_.Name >> (=) key) |> _.Path)
+                      (if key = Projects.projectPrimitives.Name then
+                           Path.combine Projects.projectPrimitives.Name.Value "AssemblyInfo.fs"
+                       else
+                           "AssemblyInfo.fs") ]
 
     projectTargetProjects
     |> List.iter (fun project ->
@@ -445,12 +438,11 @@ Target.create Ops.Build (fun _ ->
 
     projectTargetProjects
     |> List.iter (fun project ->
-        (
-        if project.Name = Projects.projectPrimitives.Name
-        then Path.combine project.Path project.Name.Value
-        else project.Path
-        , project.Name.Value + ".fsproj"
-        )
+        ((if project.Name = Projects.projectPrimitives.Name then
+              Path.combine project.Path project.Name.Value
+          else
+              project.Path),
+         project.Name.Value + ".fsproj")
         ||> Path.combine
         |> DotNet.build (fun p ->
             { p with
@@ -481,12 +473,11 @@ Target.create Ops.RestoreTools (fun _ ->
 Target.create Ops.Nuget (fun _ ->
     projectTargetProjects
     |> List.iter (fun project ->
-        (
-        if project.Name = Projects.projectPrimitives.Name
-        then Path.combine project.Path project.Name.Value
-        else project.Path
-        , project.Name.Value + ".fsproj"
-        )
+        ((if project.Name = Projects.projectPrimitives.Name then
+              Path.combine project.Path project.Name.Value
+          else
+              project.Path),
+         project.Name.Value + ".fsproj")
         ||> Path.combine
         |> DotNet.pack (fun p ->
             { p with
@@ -498,9 +489,9 @@ Target.create Ops.Nuget (fun _ ->
                       "Version", releases.Value[project.Name].AssemblyVersion
                       if project.NpmPackage.IsSome && project.NpmPackageVersion.IsSome then
                           createNpmDependency project.NpmPackage.Value project.NpmPackageVersion.Value ] }))
+
     Git.Branches.push Repo.``.``
-    Git.CommandHelper.directRunGitCommandAndFail "" "push --tags origin"
-    )
+    Git.CommandHelper.directRunGitCommandAndFail "" "push --tags origin")
 
 Target.create Ops.Publish (fun _ ->
     !!"bin/*.nupkg"

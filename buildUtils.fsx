@@ -1,8 +1,12 @@
-﻿#r "nuget: Partas.Fake.Tools.GitCliff, 0.2.3"
+﻿#r "nuget: Partas.Fake.Tools.GitCliff"
 #r "nuget: Str"
 #r "nuget: Fake.Tools.Git"
+#r "nuget: EasyBuild.FileSystemProvider"
 
 open Fake.Tools
+open EasyBuild.FileSystemProvider
+
+type Repo = AbsoluteFileSystem<__SOURCE_DIRECTORY__>
 
 type Files =
     static member ``cliff.toml`` = "cliff.toml"
@@ -33,12 +37,14 @@ module GitCliff =
 
     let createConfig packageName (initialVersion: string option) : Config =
         { Config.Default with
-            Git.CommitParsers = Config.Default.Git.CommitParsers |> Array.append [|
-                CommitParser.Create(message = "^\[skip ci\]", skip = true)
-            |]
+            Git.CommitParsers =
+                Config.Default.Git.CommitParsers
+                |> Array.append [| CommitParser.Create(message = "^\[skip ci\]", skip = true) |]
+            Git.IncludePaths = [| System.IO.Path.Combine(Repo.``.``, PackageName.get packageName) |]
             Changelog.RenderAlways = Some true
             Bump.InitialTag = initialVersion |> Option.defaultValue "0.1.0"
-            Changelog.Body = $"{{%%- macro remote_url() -%%}}
+            Changelog.Body =
+                $"{{%%- macro remote_url() -%%}}
     https://github.com/{{{{ remote.github.owner }}}}/{{{{ remote.github.repo }}}}
 {{%%- endmacro -%%}}
 
@@ -68,7 +74,7 @@ module GitCliff =
     {{%%- if contributor.pr_number %%}} in \
       [#{{{{ contributor.pr_number }}}}]({{{{ self::remote_url() }}}}/pull/{{{{ contributor.pr_number }}}}) \
     {{%%- endif %%}}
-{{%%- endfor %%}}
+{{%%- endfor %%}}\n
 "
             Changelog.Output = Files.``RELEASE_NOTES.md`` }
 
@@ -102,6 +108,7 @@ module GitCliff =
             content
             |> Json.serialize
             |> File.writeString false (Path.combine dir Files.``gitcliff-context.json``)
+
             lastVersion
 
     let private getModifiedContext packageName dir =
@@ -124,8 +131,9 @@ module GitCliff =
 
     let runWithModifiedContext cliParams packageName initialVersion dir =
         let cliffPath = Path.combine dir Files.``cliff.toml``
+
         if not <| File.exists cliffPath then
-            writeConfiguration (fun _ -> createConfig packageName initialVersion) cliffPath 
+            writeConfiguration (fun _ -> createConfig packageName initialVersion) cliffPath
 
         let _, cliModifier = getModifiedContext packageName dir
         GitCliff.run (cliParams >> cliModifier) dir
@@ -134,7 +142,9 @@ module GitCliff =
     let bumpWithModifiedContext packageName initialVersion dir =
         let cliffPath = Path.combine dir Files.``cliff.toml``
         cliffPath |> File.delete
-        cliffPath |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
+
+        cliffPath
+        |> writeConfiguration (fun _ -> createConfig packageName initialVersion)
 
         let previousVersion, cliModifier = getModifiedContext packageName dir
 
@@ -149,6 +159,7 @@ module GitCliff =
 
         GitCliff.run bumpedContextCliParams dir
         let contextPath = Path.combine dir Files.``gitcliff-context.json``
+
         let newVersion =
             File.readAsString contextPath
             |> Json.deserialize
@@ -156,17 +167,14 @@ module GitCliff =
             |> List.tryFind _.IsSome
             |> Option.flatten
 
-        GitCliff.run
-            cliModifier
-            dir
+        GitCliff.run cliModifier dir
 
         File.delete contextPath
 
         let files = [ cliffPath; Path.combine dir Files.``RELEASE_NOTES.md`` ]
-        files
-        |> List.iter (Git.Staging.stageFile "" >> ignore)
+        files |> List.iter (Git.Staging.stageFile "" >> ignore)
         Git.Commit.exec "" $"[skip ci]\n\nchore: update release notes for {packageName.Value}"
-        
+
         match previousVersion, newVersion with
         | None, _ -> newVersion
         | Some v1, Some v2 when v1 <> v2 -> newVersion
