@@ -3,8 +3,7 @@
     <File Path=".github/workflows/ci.yml" />
   </Folder>
   <Folder Name="/.Scripts/">
-    <File Path="build.fsx" />
-    <File Path="buildUtils.fsx" />
+    <Project Path="Build.fsproj" Type="Classic F#" />
   </Folder>
   <Folder Name="/Bindings/">
     <Project Path="Partas.Solid.Primitives.ActiveElement/Partas.Solid.Primitives.ActiveElement.fsproj" />
@@ -33,7 +32,9 @@
     <Project Path="Partas.Solid.Primitives/Partas.Solid.Primitives.fsproj" />
   </Folder>
   <Folder Name="/DevBindings/" />
-  <Folder Name="/Misc/" />
+  <Folder Name="/Misc/">
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/Tests/">
     <Project Path="Devgrounds/Devgrounds.fsproj" />
   </Folder>

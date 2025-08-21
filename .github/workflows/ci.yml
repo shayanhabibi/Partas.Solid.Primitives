@@ -2,6 +2,8 @@
 
 on:
   push:
+    branches:
+      - master
   workflow_dispatch:
 
 env:
@@ -22,12 +24,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
-      - name: Set up git-cliff
-        uses: kenji-miyake/setup-git-cliff@v1
 
       # workaround for https://github.com/actions/runner/issues/2033
       - name: ownership workaround
@@ -37,8 +36,8 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
-
-      - name: Run ci script
-        run: dotnet fsi ./build.fsx target publish --nuget-api-key ${{ env.NUGET_API_KEY }}
+      
+      - name: Run ci script quickly
+        run: dotnet run publish --nuget-api-key ${{ env.NUGET_API_KEY }} --parallel
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
