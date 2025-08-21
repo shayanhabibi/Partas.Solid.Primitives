@@ -175,6 +175,7 @@ let dependencies = [
     ==> Ops.RestoreTools
     ==> Ops.Clean
     ==> Ops.GitNet
+    ==> Ops.Build
     ==> Ops.Pack
     ==> Ops.GitPush
     ==> Ops.Publish
