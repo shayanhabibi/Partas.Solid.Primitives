@@ -131,10 +131,10 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -158,13 +158,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -188,13 +188,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -218,13 +218,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -248,13 +248,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -278,10 +278,10 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -305,10 +305,10 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -332,13 +332,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -362,10 +362,10 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -389,13 +389,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -419,13 +419,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -449,13 +449,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -479,22 +479,22 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
-  
-
 * =MOUSE= ADDED: Added bindings - cabboose@[f6dcd](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/f6dcd731900a51504858d0d672eca0a7c1d50aec)
-  
-
-* =MOUSE= HOTFIX: Remove # to prevent compiler type ambiguity - cabboose@[43f2a](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/43f2a1edf0b48fdb3e7839db33d4198089dcafea)
   
 
 * fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* =MOUSE= HOTFIX: Remove # to prevent compiler type ambiguity - cabboose@[43f2a](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/43f2a1edf0b48fdb3e7839db33d4198089dcafea)
+  
+
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * =MOUSE= REFACTOR: Type signatures now use U4<#HtmlElement, #Element, Document, Window> to better provide accessibility as per the source typings - cabboose@[36668](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/366688030fcab6e1b2da63fc2d8d52dc5daafe43)
+  
+
+* Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 * Add CI workflow using Partas.GitNet (#4) - cabboose@[c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
@@ -510,21 +510,21 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 2 --> Fixed
 
-* add assembly infos to projects - shayanhabibi@[8d03f](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/8d03fad141ec40953202c08ef2edbf9df818fc23)
-  
-
 * testing gitnet patching - shayanhabibi@[553e9](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/553e94de7ff54547d8769327323bb5dc54f963c5)
   
 
+* add assembly infos to projects - shayanhabibi@[8d03f](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/8d03fad141ec40953202c08ef2edbf9df818fc23)
+  
+
 ### <!-- 6 --> Others
+
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
 
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -548,19 +548,19 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
-  
-
-* =RAF= ADDED: Added bindings to @solid-primitives/raf - cabboose@[1eaa1](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/1eaa159caa8c3dfba2a6d86eae1ec460628a45d3)
-  
-
 * fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 * Add CI workflow using Partas.GitNet (#4) - cabboose@[c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
+  
+
+* =RAF= ADDED: Added bindings to @solid-primitives/raf - cabboose@[1eaa1](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/1eaa159caa8c3dfba2a6d86eae1ec460628a45d3)
   
 
 -----------------------
@@ -578,13 +578,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -608,13 +608,13 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+  
+
 * Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -638,7 +638,7 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * gitcliff 2.10 - shayanhabibi@[02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
@@ -647,7 +647,7 @@ the ecosystems marketed change does not change the Engine packages API**
 * =SPRING= 0.1.0 ADDED: implementation - cabboose@[c058b](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c058bee3484ff5b089105360fcce3996466cec53)
   
 
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -671,22 +671,25 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * gitcliff 2.10 - shayanhabibi@[02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
   
 
-* Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
+* Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 * Add CI workflow using Partas.GitNet (#4) - cabboose@[c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
+  
+
+* fix release note parser; skip skipped - shayanhabibi@[82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
   
 
 -----------------------
@@ -704,25 +707,25 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * gitcliff 2.10 - shayanhabibi@[02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
   
 
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+  
+
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fix release note parser; skip skipped - shayanhabibi@[82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 * Add CI workflow using Partas.GitNet (#4) - cabboose@[c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
+  
+
+* fix release note parser; skip skipped - shayanhabibi@[82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
   
 
 -----------------------
@@ -740,7 +743,7 @@ the ecosystems marketed change does not change the Engine packages API**
 
 ### <!-- 6 --> Others
 
-* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * gitcliff 2.10 - shayanhabibi@[02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
@@ -749,19 +752,19 @@ the ecosystems marketed change does not change the Engine packages API**
 * =SPRING= 0.1.0 ADDED: implementation - cabboose@[c058b](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c058bee3484ff5b089105360fcce3996466cec53)
   
 
+* Add initial project files for Solid-js primitives bindings - cabboose@[968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+  
+
 * Update string literal paths and bump package versions - cabboose@[ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* fix release note parser; skip skipped - shayanhabibi@[82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
-  
-
-* fantomas - shayanhabibi@[a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) - cabboose@[120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 * Add CI workflow using Partas.GitNet (#4) - cabboose@[c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
+  
+
+* fix release note parser; skip skipped - shayanhabibi@[82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
   
 
 -----------------------
