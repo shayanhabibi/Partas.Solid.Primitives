@@ -17,6 +17,9 @@ let gitnetConfig =
     let ignorePath = fun (str: string) -> Path.GetFileNameWithoutExtension(str)
     {
         GitNetConfig.initFSharp with
+            Output.Ignore = Defaults.ignoreCommits @ [
+                IgnoreCommit.SkipCi
+            ]
             ProjectType =
                 {
                     ProjectFSharpConfig.init with
@@ -47,7 +50,11 @@ Target.create Ops.Prelude <| fun args ->
         |> ignore
     }
     |> ignore
-    if not Args.local then
+    let isLocal =
+        Args.local
+        || args.Context.AllExecutingTargets
+            |> List.exists (_.Name >> (=) Ops.PublishLocal)
+    if not isLocal then
         [ $"config --local user.email \"{githubEmail}\""
           $"config --local user.name \"{githubUsername}\"" ]
         |> List.iter (Git.CommandHelper.directRunGitCommandAndFail Files.Root.``.``)
@@ -88,6 +95,13 @@ open Fake.DotNet
 
 Target.create Ops.Build <| fun _ ->
     crackedProjects.Value
+    // If we trigger the build for Partas.Solid.Primitives, it will
+    // Build the other projects for us.
+    |> List.filter (
+        _.ProjectFileName
+        >> Path.GetFileNameWithoutExtension
+        >> (=) "Partas.Solid.Primitives"
+        )
     |> List.iter (fun project ->
         DotNet.build
             (fun p ->
@@ -102,7 +116,10 @@ Target.create Ops.Build <| fun _ ->
 
 Target.create Ops.Pack <| fun _ ->
     crackedProjects.Value
-    |> List.iter (fun project ->
+    |> List.toArray
+    |> (if Args.parallelise
+        then Array.Parallel.iter
+        else Array.iter) (fun project ->
         project.ProjectFileName
         |> DotNet.pack (fun p ->
             {
@@ -128,11 +145,17 @@ let pushLocal path =
 
 Target.create Ops.PublishLocal <| fun _ ->
     !! "bin/*.nupkg"
-    |> Seq.iter pushLocal
+    |> Seq.toArray
+    |> (if Args.parallelise
+        then Array.Parallel.iter
+        else Array.iter) pushLocal
 
 Target.create Ops.Publish <| fun _ ->
     !!"bin/*.nupkg"
-    |> Seq.iter (fun path ->
+    |> Seq.toArray
+    |> (if Args.parallelise
+        then Array.Parallel.iter
+        else Array.iter) (fun path ->
         path
         |> DotNet.nugetPush (fun p ->
             { p with
@@ -152,8 +175,8 @@ let dependencies = [
     ==> Ops.Clean
     ==> Ops.GitNet
     ==> Ops.Pack
-    ==> Ops.Publish
     ==> Ops.GitPush
+    ==> Ops.Publish
     
     Ops.Pack
     ==> Ops.PublishLocal

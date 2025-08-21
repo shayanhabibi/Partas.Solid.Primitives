@@ -35,6 +35,7 @@ module Ops =
 module Args =
     let mutable apiKey: string option = None
     let mutable local: bool = false
+    let mutable parallelise: bool = false
     let setArgs args =
         let containsArg arg =
             args |> Array.contains arg
@@ -45,7 +46,7 @@ module Args =
             |> Option.bind(fun idx ->
                 Array.tryItem idx args
                 )
-        
+        parallelise <- containsArg "--parallel"
         apiKey <- getArgValue "--nuget-api-key"
         local <- containsArg "--local"
             

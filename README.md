@@ -4,7 +4,8 @@ Monorepo containing version controlled projects for binding the primitives to be
 
 The most up to date version of all primitive libraries is installable by directly installing `Partas.Solid.Primitives`.
 
-Alternatively, you can install each package individually. They are all accessible via the `Partas.Solid.Primitives` namespace.
+Alternatively, you can install each package individually. They are all accessible via the `Partas.Solid.Primitives`
+namespace.
 
 # Installation
 
@@ -14,9 +15,20 @@ Each primitive library can be installed through your preferred package manager t
 dotnet package add Partas.Solid.Primitives.Keyboard
 ```
 
-But the best way to install (and the reason why they were structured like this) is to use Femto, so that the npm installation is handled for you
+But the best way to install (and the reason why they were structured like this) is to use Femto, so that the npm
+installation is handled for you
 
 ```
 dotnet tool install femto --create-manifest-if-needed
 dotnet femto install Partas.Solid.Primitives.Keyboard
 ```
+
+# Dev
+
+## Versioning
+
+This repository uses [Partas.GitNet] for release note generation, assembly file updates, project file version updating, and semversioning of projects.
+
+Since [Partas.GitNet] observers ConventionalCommits diffs at a project granular level, try to prevent commits from accidentally dirtying other projects when doing a commit that will result in a bump.
+
+[Partas.GitNet]: https://github.com/shayanhabibi/Partas.GitNet
