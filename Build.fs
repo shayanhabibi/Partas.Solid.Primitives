@@ -21,6 +21,7 @@ let gitnetConfig =
             Output.Ignore = Defaults.ignoreCommits @ [
                 IgnoreCommit.SkipCi
             ]
+            Bump.DefaultBumpStrategy = ForceBumpStrategy.All
             ProjectType =
                 {
                     ProjectFSharpConfig.init with
