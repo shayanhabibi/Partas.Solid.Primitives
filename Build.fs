@@ -17,6 +17,7 @@ let gitnetConfig =
     let ignorePath = fun (str: string) -> Path.GetFileNameWithoutExtension(str)
     {
         GitNetConfig.initFSharp with
+            RepositoryPath = __SOURCE_DIRECTORY__
             Output.Ignore = Defaults.ignoreCommits @ [
                 IgnoreCommit.SkipCi
             ]
