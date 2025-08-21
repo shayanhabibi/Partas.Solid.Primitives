@@ -116,12 +116,12 @@ Target.create Ops.Build <| fun _ ->
         )
 
 Target.create Ops.Pack <| fun _ ->
-    crackedProjects.Value
+    projects
     |> List.toArray
     |> (if Args.parallelise
         then Array.Parallel.iter
         else Array.iter) (fun project ->
-        project.ProjectFileName
+        project.Path
         |> DotNet.pack (fun p ->
             {
                 p with
