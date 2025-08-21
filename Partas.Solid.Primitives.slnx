@@ -34,6 +34,7 @@
   <Folder Name="/DevBindings/" />
   <Folder Name="/Misc/">
     <File Path="README.md" />
+    <File Path="RELEASE_NOTES.md" />
   </Folder>
   <Folder Name="/Tests/">
     <Project Path="Devgrounds/Devgrounds.fsproj" />

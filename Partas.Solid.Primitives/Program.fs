@@ -2,7 +2,7 @@
 
 open Fable.Core
 // Stub
-module __NOOP =
+module internal __NOOP =
     [<Global>]
     let mutable x: int = 5
 
