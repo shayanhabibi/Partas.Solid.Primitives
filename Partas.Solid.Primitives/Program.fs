@@ -4,7 +4,7 @@ open Fable.Core
 // Stub
 module internal __NOOP =
     [<Global>]
-    let mutable x: int = 5
+    let x: int = Unchecked.defaultof<int>
 
     [<Global>]
     let noop = if x = 5 then () else ()
