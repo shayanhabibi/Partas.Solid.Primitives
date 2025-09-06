@@ -2,14 +2,16 @@
 namespace System
 open System.Reflection
 
+[<assembly: AssemblyFileVersionAttribute("0.3.2")>]
+[<assembly: AssemblyVersionAttribute("0.3.2")>]
+[<assembly: AssemblyInformationalVersionAttribute("0.3.2")>]
 [<assembly: AssemblyTitleAttribute("Partas.Solid.Primitives")>]
 [<assembly: AssemblyProductAttribute("Partas.Solid.Primitives")>]
-[<assembly: AssemblyVersionAttribute("0.3.0")>]
-[<assembly: AssemblyFileVersionAttribute("0.3.0")>]
 do ()
 
 module internal AssemblyVersionInformation =
+    let [<Literal>] AssemblyFileVersion = "0.3.2"
+    let [<Literal>] AssemblyVersion = "0.3.2"
+    let [<Literal>] AssemblyInformationalVersion = "0.3.2"
     let [<Literal>] AssemblyTitle = "Partas.Solid.Primitives"
     let [<Literal>] AssemblyProduct = "Partas.Solid.Primitives"
-    let [<Literal>] AssemblyVersion = "0.3.0"
-    let [<Literal>] AssemblyFileVersion = "0.3.0"
