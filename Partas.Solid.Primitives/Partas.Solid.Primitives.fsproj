@@ -53,6 +53,8 @@
         <ProjectReference Include="..\Partas.Solid.Primitives.Timer\Partas.Solid.Primitives.Timer.fsproj" />
         <ProjectReference Include="..\Partas.Solid.Primitives.Trigger\Partas.Solid.Primitives.Trigger.fsproj" />
         <ProjectReference Include="..\Partas.Solid.Primitives.Tween\Partas.Solid.Primitives.Tween.fsproj" />
+        <ProjectReference Include="..\Partas.Solid.Primitives.InputMask\Partas.Solid.Primitives.InputMask.fsproj" />
+        <ProjectReference Include="..\Partas.Solid.Primitives.Rootless\Partas.Solid.Primitives.Rootless.fsproj" />
     </ItemGroup>
 
     <ItemGroup>
