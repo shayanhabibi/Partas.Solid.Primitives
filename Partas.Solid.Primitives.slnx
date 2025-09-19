@@ -17,14 +17,17 @@
     <Project Path="Partas.Solid.Primitives.EventListener/Partas.Solid.Primitives.EventListener.fsproj" />
     <Project Path="Partas.Solid.Primitives.Idle/Partas.Solid.Primitives.Idle.fsproj" />
     <Project Path="Partas.Solid.Primitives.InputMask\Partas.Solid.Primitives.InputMask.fsproj" Type="Classic F#" />
+    <Project Path="Partas.Solid.Primitives.JsxTokenizer\Partas.Solid.Primitives.JsxTokenizer.fsproj" Type="Classic F#" />
     <Project Path="Partas.Solid.Primitives.Keyboard/Partas.Solid.Primitives.Keyboard.fsproj" />
     <Project Path="Partas.Solid.Primitives.Media/Partas.Solid.Primitives.Media.fsproj" />
     <Project Path="Partas.Solid.Primitives.Mouse/Partas.Solid.Primitives.Mouse.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Permission\Partas.Solid.Primitives.Permission.fsproj" Type="Classic F#" />
     <Project Path="Partas.Solid.Primitives.Raf/Partas.Solid.Primitives.Raf.fsproj" />
     <Project Path="Partas.Solid.Primitives.Rootless\Partas.Solid.Primitives.Rootless.fsproj" Type="Classic F#" />
     <Project Path="Partas.Solid.Primitives.Scheduled/Partas.Solid.Primitives.Scheduled.fsproj" />
     <Project Path="Partas.Solid.Primitives.Scroll/Partas.Solid.Primitives.Scroll.fsproj" />
     <Project Path="Partas.Solid.Primitives.Spring/Partas.Solid.Primitives.Spring.fsproj" />
+    <Project Path="Partas.Solid.Primitives.Storage\Partas.Solid.Primitives.Storage.fsproj" Type="Classic F#" />
     <Project Path="Partas.Solid.Primitives.Timer/Partas.Solid.Primitives.Timer.fsproj" />
     <Project Path="Partas.Solid.Primitives.Trigger/Partas.Solid.Primitives.Trigger.fsproj" />
     <Project Path="Partas.Solid.Primitives.Tween/Partas.Solid.Primitives.Tween.fsproj" />
