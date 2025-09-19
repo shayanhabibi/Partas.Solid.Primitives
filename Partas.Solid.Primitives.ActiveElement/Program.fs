@@ -11,7 +11,7 @@ module private ActiveElementSpec =
         let path = "@solid-primitives/active-element"
 
         [<Literal>]
-        let version = ""
+        let version = "2.1.1"
 
 open ActiveElementSpec
 
@@ -40,6 +40,7 @@ type ActiveElement =
     /// Provides a reactive signal of <c>document.activeElement</c>. Check which element is currently focused.
     /// </summary>
     [<ImportMember(Spec.path)>]
+    // TODO - should active element access be wrapped by option?
     static member createActiveElement() : Accessor<#HtmlElement> = jsNative
 
     /// <summary>

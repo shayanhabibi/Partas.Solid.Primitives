@@ -19,7 +19,7 @@
         <PackageReleaseNotes>Refactor of Primitives namespaces</PackageReleaseNotes>
         <GitNetInitialVersion>0.2.0</GitNetInitialVersion>
         <NpmDependencies>
-            <NpmPackage Name="@solid-primitives/active-element" Version="&gt;= 0.1.0" />
+            <NpmPackage Name="@solid-primitives/active-element" Version="&gt;= 2.1.1" />
         </NpmDependencies>
     </PropertyGroup>
 
@@ -34,7 +34,7 @@
             <IncludeAssets>runtime; build; native; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Partas.Solid" Version="1.*" />
+        <PackageReference Include="Partas.Solid" Version="2.*" />
     </ItemGroup>
 
     <ItemGroup>

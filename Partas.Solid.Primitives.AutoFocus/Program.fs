@@ -9,6 +9,8 @@ module private AutoFocusSpec =
     module Spec =
         [<Literal>]
         let path = "@solid-primitives/autofocus"
+        [<Literal>]
+        let version = "0.1.1"
 
 [<Erase; AutoOpen>]
 type AutoFocus =
