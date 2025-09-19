@@ -27,16 +27,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 [**Keyboard**](#keyboard) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Keyboard%29_0.2.0..._%28Keyboard%29_0.2.1) | 6 commits
 [**Media**](#media) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Media%29_0.2.0..._%28Media%29_0.2.1) | 6 commits
 [**Mouse**](#mouse) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Mouse%29_0.2.0..._%28Mouse%29_0.2.1) | 8 commits
-[**Primitives**](#primitives) | [0.4.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Primitives%29_0.3.2..._%28Primitives%29_0.4.0) | 10 commits
+[**Permission**](#permission) | [0.1.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/7ba050c6d1fba493ccc13aeec2406d7563471d48) | 1 commits
+[**Primitives**](#primitives) | [0.5.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Primitives%29_0.4.0..._%28Primitives%29_0.5.0) | 12 commits
 [**Raf**](#raf) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Raf%29_0.2.0..._%28Raf%29_0.2.1) | 6 commits
-[**Rootless**](#rootless) | [0.1.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c45df2215b9db6be771de98fad1d65d163e3825a) | 1 commits
+[**Rootless**](#rootless) | [0.2.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Rootless%29_0.1.0..._%28Rootless%29_0.2.0) | 1 commits
 [**Scheduled**](#scheduled) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Scheduled%29_0.2.0..._%28Scheduled%29_0.2.1) | 6 commits
 [**Scroll**](#scroll) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Scroll%29_0.2.0..._%28Scroll%29_0.2.1) | 6 commits
-[**Spring**](#spring) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Spring%29_0.2.0..._%28Spring%29_0.2.1) | 7 commits
+[**Spring**](#spring) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Spring%29_0.2.0..._%28Spring%29_0.2.1) | 6 commits
+[**Storage**](#storage) | [0.1.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/7ba050c6d1fba493ccc13aeec2406d7563471d48) | 1 commits
 [**Timer**](#timer) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Timer%29_0.2.0..._%28Timer%29_0.2.1) | 7 commits
 [**Trigger**](#trigger) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Trigger%29_0.2.0..._%28Trigger%29_0.2.1) | 7 commits
 [**Tween**](#tween) | [0.2.1](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Tween%29_0.2.0..._%28Tween%29_0.2.1) | 8 commits
 [**InputMask**](#inputmask) | [0.1.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c45df2215b9db6be771de98fad1d65d163e3825a) | None yet!
+[**JsxTokenizer**](#jsxtokenizer) | [0.1.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/7ba050c6d1fba493ccc13aeec2406d7563471d48) | None yet!
 
 
 -----------------------
@@ -68,13 +71,13 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -97,19 +100,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -129,19 +132,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -161,19 +164,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -193,19 +196,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -228,13 +231,13 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -257,13 +260,13 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -283,19 +286,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -318,13 +321,13 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -344,19 +347,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -376,19 +379,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -408,19 +411,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -443,7 +446,16 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * =MOUSE= HOTFIX: Remove # to prevent compiler type ambiguity by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#43f2a](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/43f2a1edf0b48fdb3e7839db33d4198089dcafea)
   
 
+* =MOUSE= ADDED: Added bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#f6dcd](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/f6dcd731900a51504858d0d672eca0a7c1d50aec)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
+  
+
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+  
+
+* fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
 * Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
@@ -452,13 +464,15 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * =MOUSE= REFACTOR: Type signatures now use U4<#HtmlElement, #Element, Document, Window> to better provide accessibility as per the source typings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#36668](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/366688030fcab6e1b2da63fc2d8d52dc5daafe43)
   
 
-* =MOUSE= ADDED: Added bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#f6dcd](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/f6dcd731900a51504858d0d672eca0a7c1d50aec)
-  
+<div align="right"><a href="#quick-navigation">(back to top)</a></div>
 
-* fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
-  
+-----------------------
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+# Permission
+
+### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Permission%29_0.1.0...HEAD)
+
+* permission primitives by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#91083](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/910838486687f1c1155bfd132c1854862c84a4c1)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -467,9 +481,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 # Primitives
 
-### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Primitives%29_0.4.0...HEAD)
+### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Primitives%29_0.5.0...HEAD)
+
+* update primitives project by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#2700d](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/2700d9bcd40a20799ed1ad5b9b29c7d0f20696db)
+  
+
+### [0.5.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Primitives%29_0.4.0..._%28Primitives%29_0.5.0) - (2025-09-19)
+
+#### <!-- 6 --> Others
 
 * input-mask and rootless bindings by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#ca450](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ca450ed805507a88249f57ffcfbaff099aa061a0)
+  
+
+* update primitives project by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#2700d](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/2700d9bcd40a20799ed1ad5b9b29c7d0f20696db)
   
 
 ### [0.4.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Primitives%29_0.3.2..._%28Primitives%29_0.4.0) - (2025-09-19)
@@ -490,27 +514,27 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 2 --> Fixed
 
-* testing gitnet patching by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#553e9](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/553e94de7ff54547d8769327323bb5dc54f963c5)
+* add assembly infos to projects by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#8d03f](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/8d03fad141ec40953202c08ef2edbf9df818fc23)
   
 
-* add assembly infos to projects by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#8d03f](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/8d03fad141ec40953202c08ef2edbf9df818fc23)
+* testing gitnet patching by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#553e9](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/553e94de7ff54547d8769327323bb5dc54f963c5)
   
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -533,16 +557,16 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
-  
-
-* =RAF= ADDED: Added bindings to @solid-primitives/raf by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#1eaa1](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/1eaa159caa8c3dfba2a6d86eae1ec460628a45d3)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* =RAF= ADDED: Added bindings to @solid-primitives/raf by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#1eaa1](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/1eaa159caa8c3dfba2a6d86eae1ec460628a45d3)
+  
+
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -551,7 +575,11 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 # Rootless
 
-### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Rootless%29_0.1.0...HEAD)
+### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Rootless%29_0.2.0...HEAD)
+
+### [0.2.0](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Rootless%29_0.1.0..._%28Rootless%29_0.2.0) - (2025-09-19)
+
+#### <!-- 6 --> Others
 
 * input-mask and rootless bindings by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#ca450](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ca450ed805507a88249f57ffcfbaff099aa061a0)
   
@@ -573,19 +601,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -605,19 +633,19 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+  
+
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
-  
-
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -637,22 +665,30 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
-* =SPRING= 0.1.0 ADDED: implementation by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c058b](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c058bee3484ff5b089105360fcce3996466cec53)
-  
-
-* gitcliff 2.10 by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
-  
-
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+  
+
+* =SPRING= 0.1.0 ADDED: implementation by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c058b](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c058bee3484ff5b089105360fcce3996466cec53)
+  
+
+<div align="right"><a href="#quick-navigation">(back to top)</a></div>
+
+-----------------------
+
+# Storage
+
+### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.Primitives/compare/_%28Storage%29_0.1.0...HEAD)
+
+* storage primitives by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#6a5b2](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/6a5b275c5e74a6bc927ce8a54cc03fc4935e4d0d)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -672,22 +708,22 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
-* gitcliff 2.10 by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
   
 
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+* fix release note parser; skip skipped by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -707,22 +743,22 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
-* gitcliff 2.10 by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
   
 
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+* fix release note parser; skip skipped by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -742,25 +778,25 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 #### <!-- 6 --> Others
 
-* =SPRING= 0.1.0 ADDED: implementation by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c058b](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c058bee3484ff5b089105360fcce3996466cec53)
-  
-
-* gitcliff 2.10 by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#02d1e](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/02d1e793cea72b4477ede1c3d13e425fea92b638)
+* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
   
 
 * Add CI workflow using Partas.GitNet (#4) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c3975](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c3975e312800671b18cc2608bbd294fbe13ee448)
   
 
-* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
   
 
 * fantomas by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#a8f38](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/a8f3849c1a9cb589d98cc1220f79e5fbb80378bc)
   
 
-* Update string literal paths and bump package versions by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#ae750](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/ae7506af672962ccd429029f18ee7808fbf62a79)
+* fix release note parser; skip skipped by [@shayanhabibi](https://github.com/shayanhabibi/Partas.Solid.Primitives/shayanhabibi) with [#82d04](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/82d04dc390ac35a1a41a211bb6753eca1e10f586)
   
 
-* Add initial project files for Solid-js primitives bindings by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#968b5](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/968b55fcd4fa5913c84adb7374f3aef79c5acc61)
+* Simplify usage and namespaces (#1) by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#120be](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/120bebf6ac9680d3f7892df270b37d29864e4304)
+  
+
+* =SPRING= 0.1.0 ADDED: implementation by [@cabboose](https://github.com/shayanhabibi/Partas.Solid.Primitives/cabboose) with [#c058b](https://github.com/shayanhabibi/Partas.Solid.Primitives/commit/c058bee3484ff5b089105360fcce3996466cec53)
   
 
 <div align="right"><a href="#quick-navigation">(back to top)</a></div>
@@ -768,6 +804,10 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 -----------------------
 
 # InputMask
+
+No commits at this time.
+
+# JsxTokenizer
 
 No commits at this time.
 
