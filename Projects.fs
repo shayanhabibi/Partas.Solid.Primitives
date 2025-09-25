@@ -180,8 +180,28 @@ module Projects =
         path Files.Root.``Partas.Solid.Primitives``.``.``
         projectWithoutBase "Partas.Solid.Primitives"
     }
+    let inputMask = project {
+        path Files.Root.``Partas.Solid.Primitives.InputMask``.``.``
+    }
+    let jsxTokenizer = project {
+        path Files.Root.``Partas.Solid.Primitives.JsxTokenizer``.``.``
+    }
+    let permission = project {
+        path Files.Root.``Partas.Solid.Primitives.Permission``.``.``
+    }
+    let rootless = project {
+        path Files.Root.``Partas.Solid.Primitives.Rootless``.``.``
+    }
+    let storage = project {
+        path Files.Root.``Partas.Solid.Primitives.Storage``.``.``
+    }
 
 let projects = [
+    Projects.inputMask
+    Projects.jsxTokenizer
+    Projects.permission
+    Projects.rootless
+    Projects.storage
     Projects.activeElement
     Projects.audio
     Projects.autoFocus
